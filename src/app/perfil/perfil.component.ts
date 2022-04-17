@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.component.scss']
 })
 export class PerfilComponent implements OnInit {
+  ayuda: boolean;
 
-  constructor() { }
+  constructor() {
+    this.ayuda = false;
+   }
 
   ngOnInit(): void {
+  }
+
+  popUpAyuda(): void{
+    this.ayuda = !this.ayuda;
   }
 
 }

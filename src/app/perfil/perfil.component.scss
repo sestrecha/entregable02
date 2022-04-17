@@ -39,7 +39,28 @@ footer{
     }
 }
 
-/*Pfp section*/
+/*Pop-up de ayuda*/
+#popup-ayuda{
+    position: absolute;
+    display: flex;
+    article{
+        margin: auto;
+        background-color: $claro;
+        padding: 10px;
+        *{
+            text-align: center;
+        }
+        button{
+            float: right;
+            border-radius: 5px;
+            background-color: $salmon;
+            border-style: none;
+            padding: 2px 7px;
+        }
+    }
+}
+
+/* Foto de perfil section*/
 #pfp-section{
     display: flex;
     flex-wrap: wrap;
@@ -64,5 +85,61 @@ footer{
             float: right;
             max-height: 22%;
         }
+    }
+}
+
+/*Sección de datos*/
+#datos-section{
+    display: flex;
+    margin: 30px 5px;
+    p{
+        text-align: center;
+    }
+    article{
+        display:flex;
+        flex-wrap: wrap;
+        margin: auto;
+        div{
+            display: flex;
+            img{
+                margin: auto;
+                max-height: 70%;
+            }
+        }
+        
+    }
+}
+
+#contacto-section{
+    article{
+        margin: auto;
+        display: flex;
+        p{
+            margin: auto;
+            margin-left: 2%;
+        }
+        h3{
+            margin: auto;
+            margin-right: 2%;
+        }
+    }
+}
+
+#btn-section{
+    display: flex;
+    button{
+        margin: 75px auto;
+        border: 2px solid $oscuro;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $amarillo;
+        padding: 8px 15px;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 31px;
+        text-align: center;
+        cursor: pointer;
     }
 }
