@@ -1,5 +1,5 @@
 @import "src/styles.scss";
-
+/* Menú de arriba */
 header {
     display: flex;
     height: 70px;
@@ -17,6 +17,7 @@ header {
     }
 }
 
+/*Navegación de abajo.*/
 footer{
     position: absolute;
     bottom: 0;
@@ -37,5 +38,33 @@ footer{
     }
     #selected{
         background-color: rgba(255, 132, 115, 0.60);
+    }
+}
+
+/*Pfp section*/
+#pfp-section{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $salmon;
+    margin: auto;
+    padding: 5px 5px;
+    #pfp-div{
+        display: flex;
+        padding: 15px 0px;
+        #pfp{
+            width: 100%;
+            margin: auto;
+        }
+    }
+    div{
+        margin: 4%;
+        h2{
+            text-align: center;
+            margin-top: 25px;
+        }
+        #ayuda{
+            float: right;
+            max-height: 22%;
+        }
     }
 }

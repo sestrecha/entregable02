@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 /* Colores en variables globales. */
 $amarillo: #FFF2B3;
 $claro: #F6F7EB;
 $oscuro: #341827;
 $salmon: #FF8473;
+
 
 .col-s-1 {width: 8.33%;}
 .col-s-2 {width: 16.66%;}
@@ -20,6 +23,7 @@ $salmon: #FF8473;
 *{
     color: $oscuro;
     margin: 0%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body{
