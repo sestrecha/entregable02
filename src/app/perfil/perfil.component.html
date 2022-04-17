@@ -3,15 +3,56 @@
     <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
     <h1 class="col-s-8">Nombre de la App</h1>
 </header>
+<section id="popup-ayuda">
+    <article *ngIf="ayuda" class="col-s-8">
+        <button (click)="popUpAyuda()">X</button>
+        <div>
+            <h2>Perfil</h2>
+            <p>¡Bienvenido o bienvenida a tu perfil!<br>Aquí se mostrará toda la información que 
+                nos has dado y que será visible para las protectoras a la hora de tramitar una adopción. 
+                Si quieres modificar algún dato pulsa el botón de “Modificar información” y vuelve 
+                a rellenar el formulario de datos.</p>
+        </div>
+
+    </article>
+</section>
 <section id="pfp-section" class="col-s-10">
     <div id="pfp-div" class="col-s-4">
         <img id="pfp" src="./assets/images/pfp.png" alt="Foto de perfil.">
     </div>
     <div class="col-s-6">
-        <img id="ayuda" src="./assets/images/ayuda.png" alt="Botón de ayuda sobre la página.">
+        <img id="ayuda" (click)="popUpAyuda()" src="./assets/images/ayuda.png" alt="Botón de ayuda sobre la página.">
         <h2 class="col-s-12">@usuario</h2>
         <p class="col-s-12">Roberto González, 52 años, Barcelona. Empresario y padre.</p>
     </div>
+</section>
+<section id="datos-section">
+    <ul class="col-s-5">
+        <li>sadadsadasda</li>
+        <li>sadadsadasda</li>
+        <li>sadadsadasda</li>
+        <li>sadadsadasda</li>
+        <li>sadadsadasda</li>
+    </ul>
+    <article class="col-s-6">
+        <div class="col-s-12">
+            <img src="./assets/images/location.png" alt="Icono localización.">
+        </div>
+        <p>Carrer d'Spronceda, 257, 08027, Barcelona.</p>
+    </article>
+</section>
+<section id="contacto-section">
+    <article class="col-s-12">
+        <h3>Correo electrónico:</h3>
+        <p>correo@gmail.com</p>
+    </article>
+    <article class="col-s-12">
+        <h3>Número de teléfono:</h3>
+        <p>6XX XX XX XX</p>
+    </article>
+</section>
+<section id="btn-section">
+    <button>Modificar información</button>
 </section>
 <footer class="col-s-12">
     <div class="col-s-4"><a href="/rescate">Rescate</a></div>
