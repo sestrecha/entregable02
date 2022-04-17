@@ -34,3 +34,58 @@ p{
 body{
     background-color: $claro;
 }
+
+/* Menú de arriba */
+header {
+    display: flex;
+    height: 70px;
+    h1{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        text-align: center;
+        margin: auto;
+    }
+    img{
+        max-height: 60%;
+        margin: auto;
+    }
+}
+
+/*Navegación de abajo.*/
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    div{
+        background-color: rgba(255, 132, 115, 0.25);
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        margin: auto;
+    }
+    #selected{
+        background-color: rgba(255, 132, 115, 0.60);
+    }
+}
+
+.button-1 {
+    background-color: $amarillo;
+    border: 2px solid $oscuro;
+    display: flex;
+    margin: auto;
+    padding: 2%;
+    h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        margin: auto;
+    }
+}

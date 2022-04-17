@@ -1,0 +1,56 @@
+@import "src/styles.scss";
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    max-width: 35%;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+}
+
+p {
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+}
+
+section {
+    margin: auto;
+    margin-top: 10%;
+}
+
+#intro-section {
+    margin-top: 15%;
+}
+
+#rescate-section {
+    background-color: rgba(255, 132, 115, 0.75);
+    padding: 5%;
+}
+
+#cuenta-section {
+    padding: 5%;
+    margin-bottom: 10%;
+    section {
+        display: flex;
+        margin: auto;
+    }
+    button {
+        display: inline-flex;
+        margin-inline-start: auto;
+        p{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+}
+
