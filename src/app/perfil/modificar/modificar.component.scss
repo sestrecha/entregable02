@@ -1,6 +1,6 @@
 @import "src/styles.scss";
 
-label{
+label, legend{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
@@ -18,7 +18,6 @@ input{
         border-color: $salmon;
         border-width: 2px;
     }
-
 }
 
 #titulo-section{
@@ -81,6 +80,51 @@ input{
         input{
             margin: auto;
         
+        }
+    }
+}
+
+#n-masc-sect{
+    display: flex;
+    margin: 15px auto;
+    div{
+        display: flex;
+        margin: auto;
+        *{
+            margin: auto;
+        }
+        select{
+            background: $amarillo;
+            border: 2px solid $oscuro;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 2px 5px;
+
+        }
+    }
+}
+
+#radios-sect{
+    article{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    fieldset{
+        margin: 0px auto;
+        border-width: 0px;
+        padding: 0px;
+        h3, label{
+            display: block;
+        }
+        label{
+            font-family: 'Inter';
+            font-size: 14px;
+            font-weight: 400;
+        }
+        input{
+            margin: 2%;
         }
     }
 }
