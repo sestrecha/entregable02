@@ -1,5 +1,14 @@
 @import "src/styles.scss";
 
+#difuminado{
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 24, 39, 0.5);;
+}
+
 /*Pop-up de ayuda*/
 #popup-ayuda{
     position: absolute;
@@ -87,20 +96,24 @@
 }
 
 #btn-section{
-    display: flex;
-    button{
-        margin: 75px auto;
-        border: 2px solid $oscuro;
-        box-sizing: border-box;
-        border-radius: 5px;
-        background-color: $amarillo;
-        padding: 8px 15px;
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 31px;
-        text-align: center;
-        cursor: pointer;
+    a{
+        display: flex;
+        text-decoration: none;
+        button{
+            margin: 75px auto;
+            border: 2px solid $oscuro;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: $amarillo;
+            padding: 8px 15px;
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 31px;
+            text-align: center;
+            cursor: pointer;
+        }
     }
 }
+

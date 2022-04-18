@@ -8,6 +8,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PortadaComponent } from './portada/portada.component';
 import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
+import { ModificarComponent } from './perfil/modificar/modificar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
     PerfilComponent,
     PortadaComponent,
     PopUpRegComponent,
-    PopUpIniComponent
+    PopUpIniComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<header>
+    <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
+    <h1 class="col-s-8">Nombre de la App</h1>
+</header>
+<section id="titulo-section">
+    <a href="/perfil"><img src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior."></a>
+    <h2>Modificar mis datos</h2>
+</section>
+<form>
+    <article id="pfp-sect">
+        <div class="col-s-5">
+            <label for="pfp">Foto de perfil</label>
+            <img src="./assets/images/pfp.png" alt="Actual foto de perfil">
+            <button onclick="$('#pfp-file').click()" name="pfp" class="button-1">Cambiar foto</button>
+            <input type="file" id="pfp-file" style="display:none" accept="image/*">
+        </div>
+        <div class="col-s-5">
+            <label for="desc">Descripción</label>
+            <textarea name="desc" cols="17" rows="6"></textarea>
+        </div>
+    </article>
+    <article id="contacto-sect">
+        <article class="col-s-10">
+            <div>
+                <label class="col-s-12" for="email">Correo electrónico:</label>
+                <input class="col-s-10" type="text" name="tlf">
+            </div>
+            <div>
+                <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
+                <input class="col-s-10" type="text" name="tlf">
+            </div>
+        </article>
+    </article>
+</form>
+<footer class="col-s-12">
+    <div class="col-s-4"><a href="/rescate">Rescate</a></div>
+    <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
+    <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
+</footer>

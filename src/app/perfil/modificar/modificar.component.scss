@@ -1,0 +1,86 @@
+@import "src/styles.scss";
+
+label{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+input{
+    background-color: rgba(255, 132, 115, 0.25);
+    /* Oscuro */
+    border: 1px solid $oscuro;
+    font-size: 14px;
+    &:focus{
+        box-shadow: 0 0 2px $salmon;
+        outline: none !important;
+        border-color: $salmon;
+        border-width: 2px;
+    }
+
+}
+
+#titulo-section{
+    display: flex;
+    background-color: rgba(255, 132, 115, 0.75);
+    padding: 10px 5px;
+    *{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+#pfp-sect{
+    display: flex;
+    margin: 10px auto;
+    div{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            max-width: 70%;
+        }
+        label{
+            text-align: center;
+        }
+        textarea{
+            background-color: rgba(255, 132, 115, 0.25);
+            /* Oscuro */
+            border: 1px solid $oscuro;
+            font-size: 14px;
+            &:focus{
+                box-shadow: 0 0 2px $salmon;
+                outline: none !important;
+                border-color: $salmon;
+                border-width: 2px;
+            }
+        }
+        *{
+            margin: 3px auto;
+        }
+    }
+    button{
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+#contacto-sect{
+    article{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        input{
+            margin: auto;
+        
+        }
+    }
+}
