@@ -13,6 +13,7 @@
 #popup-lectura{
     position: absolute;
     display: flex;
+    z-index: 999;
     article{
         margin: auto;
         background-color: $claro;
@@ -42,7 +43,7 @@
     }
 }
 
-/* Foto de perfil section*/
+/* header asi salmon con el boton de adopcion responsable*/
 #lectura-section{
     display: flex;
     flex-wrap: wrap;
@@ -82,3 +83,21 @@
     }
 }
 
+#tl-section{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $salmon;
+    opacity: 0.25;
+    margin: auto;
+    padding: auto;
+
+
+}
+
+#table{
+    table-layout: fixed;
+}
+
+#foto{
+    object-fit: contain;
+}
