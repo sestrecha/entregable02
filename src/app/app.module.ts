@@ -8,8 +8,11 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PortadaComponent } from './portada/portada.component';
 import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
+import { PopUpComponent } from './rescate/pop-up/pop-up.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
+import {RescateComponent} from "./rescate/rescate.component";
+import {SeguimientoComponent} from "./seguimiento/seguimiento.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { AdopcionComponent } from './adopcion/adopcion.component';
     PopUpRegComponent,
     PopUpIniComponent,
     ModificarComponent,
+    RescateComponent,
+    SeguimientoComponent,
+    PopUpComponent,
     AdopcionComponent
   ],
   imports: [
