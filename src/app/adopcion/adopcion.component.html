@@ -38,6 +38,25 @@
     </div>
 </section>
 
+<section id="tl-section" class = "col-s-10">
+    <table id= "tabla" class="col-s-10">
+    <tr *ngFor="let mascota of mascotas; let i=index;">
+        <td id="foto"><img src = {{mascota.foto}}></td>
+        <td id = "informasion">
+            <ul>
+                <li>{{mascota.nombre}}</li>
+                <li>{{mascota.tipo}}</li>
+                <li>{{mascota.sexo}}</li>
+                <li>{{mascota.edad}} años</li>
+                <li>{{mascota.raza}}</li>
+                <li>{{mascota.ciudad}}</li>
+            </ul>
+        </td>
+        <td>
+            <button>+info</button>
+        </td>
+    </table>
+</section>
 
 <footer class="col-s-12">
     <div class="col-s-4"><a href="/rescate">Rescate</a></div>

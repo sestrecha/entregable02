@@ -5,10 +5,11 @@ p{
   /* Botón light */
   font-family: 'Inter';
   font-weight: 600;
+  display: flex;
 
   /* Oscuro */
   color: #341827;
-  margin-top: 20px;
+  margin: 20px auto;
 
 }
 
@@ -30,23 +31,25 @@ button{
 form{
   margin-left: 50px;
   margin-bottom: 40px;
+
 }
 select{
 
-  width: 400px;
+  width: 60%;
   background: #FFF2B3;
-  margin-left:30px;
-  margin-top: 20px;
+  margin: 20px 20px auto ;
+  display: flex;
   /* Oscuro */
   border: 2px solid #341827;
   box-sizing: border-box;
 }
+
 input{
   background-color: rgba(255, 132, 115, 0.25);
   /* Oscuro */
   border: 1px solid $oscuro;
   font-size: 14px;
-  margin-left: 30px;
+  margin: auto 20px ;
 
   &:focus{
     box-shadow: 0 0 2px $salmon;
@@ -67,16 +70,18 @@ input{
 
 }
 #franja{
-  margin-top: 30px;
+  margin: 30px auto;
+  display: flex;
   height: 60px;
   background: rgba(255, 132, 115, 0.75);
 }
 
 #foto{
-  width: 420px;
-  height: 348px;
-  margin-left: 115px;
-  margin-top:  30px;
+
+
+  height: 300px;
+  margin: 30px 30px auto;
+  display:flex;
 
   /* Amarillo */
   background: #FFF2B3;
@@ -86,24 +91,8 @@ input{
   box-sizing: border-box;
 
 }
-#f{
-  width: 420px;
-  height: 348px;
-  margin-left: 115px;
-  margin-top:  30px;
 
-  /* Amarillo */
-  background: #FFF2B3;
-
-  /* Oscuro */
-  border: 2px solid #341827;
-  box-sizing: border-box;
-
-}
 #camara{
-
-  margin-top: 100px;
-  margin-left: 130px;
-
+  margin: auto;
 }
 
