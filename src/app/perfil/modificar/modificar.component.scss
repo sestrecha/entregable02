@@ -20,6 +20,15 @@ input{
     }
 }
 
+select{
+    background: $amarillo;
+    border: 2px solid $oscuro;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
 #titulo-section{
     display: flex;
     background-color: rgba(255, 132, 115, 0.75);
@@ -93,15 +102,7 @@ input{
         *{
             margin: auto;
         }
-        select{
-            background: $amarillo;
-            border: 2px solid $oscuro;
-            box-sizing: border-box;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 2px 5px;
 
-        }
     }
 }
 
