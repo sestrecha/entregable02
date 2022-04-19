@@ -1,0 +1,84 @@
+@import "src/styles.scss";
+
+#difuminado{
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 24, 39, 0.5);;
+}
+
+/*Pop-up de lectura sobre adopción responsable*/
+#popup-lectura{
+    position: absolute;
+    display: flex;
+    article{
+        margin: auto;
+        background-color: $claro;
+        padding: 10px;
+        *{
+            text-align: justify;
+            h2{
+                text-align:center;
+            }
+        }
+        button{
+            float: center;
+            margin: 15px 425px;
+            border: 2px solid $oscuro;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: $amarillo;
+            padding: 15px 40px;
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Foto de perfil section*/
+#lectura-section{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $salmon;
+    margin: auto;
+    padding: auto;
+
+    div{
+        margin: 1%;
+        h2{
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+}
+
+#btn-section{
+    a{
+        display: flex;
+        text-decoration: none;
+
+    }
+    button{
+        margin: 0px auto;
+        border: 2px solid $oscuro;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $claro;
+        padding: 8px 15px;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+

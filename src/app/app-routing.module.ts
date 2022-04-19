@@ -6,7 +6,7 @@ import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
 import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
-
+import { AdopcionComponent } from './adopcion/adopcion.component';
 
 const routes: Routes = [
   { path:'perfil', component:PerfilComponent },
@@ -15,6 +15,7 @@ const routes: Routes = [
   { path:'pop-up-reg',  component:PopUpRegComponent },
   { path:'perfil/modificar',  component:ModificarComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
+  { path:'adopcion', component:AdopcionComponent},
   { path: '**', redirectTo: 'portada', pathMatch: 'full' }
 ];
 
