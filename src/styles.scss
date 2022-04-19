@@ -38,7 +38,7 @@ body{
 /* Menú de arriba */
 header {
     display: flex;
-    height: 70px;
+    height: 8vh;
     h1{
         font-style: normal;
         font-weight: 700;
@@ -54,26 +54,31 @@ header {
 
 /*Navegación de abajo.*/
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    height: 70px;
-    display: flex;
-    div{
-        background-color: rgba(255, 132, 115, 0.25);
+    height: 9vh;
+    article{
         display: flex;
+        background-color: white;
+        height: 100%;
+        div{
+            background-color: rgba(255, 132, 115, 0.25);
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            margin: auto;
+        }
+        #selected{
+            background-color: rgba(255, 132, 115, 0.60);
+        }
     }
-    a{
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        text-align: center;
-        margin: auto;
     }
-    #selected{
-        background-color: rgba(255, 132, 115, 0.60);
-    }
-}
+
 
 .button-1 {
     background-color: $amarillo;

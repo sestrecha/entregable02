@@ -9,7 +9,6 @@ label, legend{
 
 input{
     background-color: rgba(255, 132, 115, 0.25);
-    /* Oscuro */
     border: 1px solid $oscuro;
     font-size: 14px;
     &:focus{
@@ -29,6 +28,14 @@ select{
     padding: 2px 5px;
 }
 
+#principal{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 82vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #titulo-section{
     display: flex;
     background-color: rgba(255, 132, 115, 0.75);
@@ -46,6 +53,7 @@ select{
         margin: auto;
         display: flex;
         flex-wrap: wrap;
+        
         img{
             max-width: 70%;
         }
@@ -54,7 +62,6 @@ select{
         }
         textarea{
             background-color: rgba(255, 132, 115, 0.25);
-            /* Oscuro */
             border: 1px solid $oscuro;
             font-size: 14px;
             &:focus{
@@ -77,11 +84,9 @@ select{
 }
 
 #contacto-sect{
-    article{
-        display: flex;
+    display: flex;
         flex-wrap: wrap;
         margin: auto;
-    }
     div{
         display: flex;
         flex-wrap: wrap;
@@ -96,27 +101,20 @@ select{
 #n-masc-sect{
     display: flex;
     margin: 15px auto;
-    div{
-        display: flex;
+    *{
         margin: auto;
-        *{
-            margin: auto;
-        }
-
     }
 }
 
 #radios-sect{
-    article{
         display: flex;
         flex-wrap: wrap;
         margin: auto;
-    }
     fieldset{
         margin: 0px auto;
         border-width: 0px;
         padding: 0px;
-        h3, label{
+        legend, label{
             display: block;
         }
         label{
@@ -126,6 +124,60 @@ select{
         }
         input{
             margin: 2%;
+        }
+    }
+}
+
+#horas-casa-sect{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    div{
+        margin: 5px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        label{
+            margin: auto;
+            text-align: center;
+        }
+        select{
+            margin: auto;
+        }
+    }
+}
+
+#ultima-sect{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 40px auto;
+    fieldset{
+        margin: 0px auto;
+        border-width: 0px;
+        padding: 0px;
+        legend, label{
+            display: block;
+        }
+        label{
+            font-family: 'Inter';
+            font-size: 14px;
+            font-weight: 400;
+        }
+        input{
+            margin: 2%;
+        }
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        img{
+            max-width: 20%;
+            margin: 5px auto;
+        }
+        label, p{
+            text-align: center;
+            margin: 5px auto;
         }
     }
 }

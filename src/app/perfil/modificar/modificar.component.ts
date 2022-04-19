@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modificar.component.scss']
 })
 export class ModificarComponent implements OnInit {
+  salir:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  choosePfp(){
-    
+  salirPopup(): void {
+    this.salir = !this.salir;
+
   }
 
 }
