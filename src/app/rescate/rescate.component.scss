@@ -15,7 +15,7 @@ p{
 }
 
 
-button{
+#boton{
   background: rgba(255, 132, 115, 0.75);
   display: flex;
   margin: 30px auto;
@@ -29,10 +29,6 @@ button{
   text-align: center;
 }
 
-#close{
-  background: rgba(255, 132, 115, 0.75);
-  display: flex;
-}
 
 #franja_p{
 
@@ -44,19 +40,6 @@ button{
   color: #341827;
   margin:auto;
 
-}
-
-#popup{
-  position: absolute;
-  margin: 12% 12% auto;
-  display: flex;
-}
-#close{
-  float: right;
-  border-radius: 5px;
-  background-color: $salmon;
-  border-style: none;
-  padding: 2px 7px;
 }
 
 #franja{
@@ -96,5 +79,51 @@ button{
 
 }
 
+#popup_p{
+  margin: 70px 70px auto;
+  text-align: center;
+  padding: 5%;
+  position: absolute;
+
+}
+#popup_h{
+
+  /* Título tocho */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  margin: 10% 20% 30% 10%;
+  position: absolute;
+
+  /* Oscuro */
+  color: #341827;
+}
+
+#botones{
+  display: flex;
+  margin: auto 40%;
+
+}
+
+#popup{
+  position: absolute;
+  margin: 12% 12% auto;
+  display: flex;
+
+  background: #F6F7EB;
+  width: 75%;
+  height: 50%;
+
+
+}
+#close{
+  border-radius: 5px;
+  background-color: $salmon;
+  border-style: none;
+  padding: 2px 7px;
+  display: block;
+  float: right;
+  position: absolute;
+}
 
 
