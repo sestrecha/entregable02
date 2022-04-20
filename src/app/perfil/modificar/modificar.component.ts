@@ -15,7 +15,7 @@ export class ModificarComponent{
     email : new FormControl('', [Validators.required,
       Validators.pattern("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
     ]),
-    tlf : new FormControl(''),
+    tlf : new FormControl('', [Validators.minLength(8), Validators.maxLength(10)]),
     n_masc : new FormControl(''),
     hogar : new FormControl(''),
     hogar_other : new FormControl(''),
@@ -39,8 +39,8 @@ export class ModificarComponent{
     this.difuminar = this.salir;
   }
 
-  submitForm(): void{
-    console.log('aaa')
+  onSubmit(){
+    console.log('aaa');
 
   }
 
