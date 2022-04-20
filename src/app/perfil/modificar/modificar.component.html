@@ -3,38 +3,40 @@
     <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
     <h1 class="col-s-8">Nombre de la App</h1>
 </header>
-
 <section class="principal">
     <section class="titulo-section col-s-12">
         <img (click)="salirPopup()" src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior.">
         <h2>Modificar mis datos</h2>
     </section>
-    <form>
+    <form [formGroup]="datos">
         <article id="pfp-sect">
             <div class="col-s-5">
                 <label for="pfp-file">Foto de perfil</label>
                 <img src="./assets/images/pfp.png" alt="Actual foto de perfil">
                 <button onclick="$('#pfp-file').click()" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
-                <input type="file" id="pfp" style="display:none" accept="image/*">
+                <input type="file" id="pfp" style="display:none" accept="image/*" formControlName="pfp">
             </div>
             <div class="col-s-5">
                 <label for="desc">Descripción</label>
-                <textarea name="desc" id="desc" cols="17" rows="6"></textarea>
+                <textarea name="desc" id="desc" cols="17" rows="6" formControlName="descripcion"></textarea>
             </div>
         </article>
         <article id="contacto-sect"  class="col-s-10">
             <div>
                 <label class="col-s-12" for="email">Correo electrónico:</label>
-                <input class="col-s-10" type="text" name="email" id="email">
+                <input class="col-s-10" type="text" name="email" id="email" formControlName="email">
+                <div *ngIf="f.email.touched && f.email.invalid">
+                    <small class="text-danger" *ngIf="f.email.errors?.required">Email required</small>
+                </div>
             </div>
             <div>
                 <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
-                <input class="col-s-10" type="text" name="tlf" id="tlf">
+                <input class="col-s-10" type="text" name="tlf" id="tlf" formControlName="tlf">
             </div>
         </article>
         <article id="n-masc-sect" class="col-s-10">
             <label for="n-mascotas">Número de mascotas</label>
-            <select name="n-mascotas" id="n-mascotas">
+            <select name="n-mascotas" id="n-mascotas" formControlName="n_masc">
                 <option value="0">Ninguna</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -42,25 +44,41 @@
                 <option value="4">Más de tres</option>
             </select>
         </article>
-        <article id="radios-sect"  class="col-s-11">
+        <article id="radios-sect" class="col-s-11">
             <fieldset class="col-s-6">
                 <legend>Tipo de hogar:</legend>
-                <label for="piso"><input name="hogar" id="piso" type="radio" class="radio-btn">Piso</label>
-                <label for="jardin"><input name="hogar" id="jardin" type="radio" class="radio-btn">Casa con jardín</label>
-                <label for="otro-hogar"><input name="hogar" id="otro-hogar" type="radio" class="radio-btn">Otro<input name="hogar" class="col-s-7 otro" type="text"></label>
+                <label for="piso">
+                    <input name="hogar" id="piso" type="radio" class="radio-btn" formControlName="piso">
+                    Piso</label>
+                <label for="jardin">
+                    <input name="hogar" id="jardin" type="radio" class="radio-btn" formControlName="piso">
+                    Casa con jardín</label>
+                <label for="otro-hogar">
+                    <input name="hogar" id="otro-hogar" type="radio" class="radio-btn" formControlName="piso">
+                    Otro<input name="hogar" class="col-s-7 otro" type="text" formControlName="piso_other">
+                </label>
             </fieldset>
             <fieldset class="col-s-6">
                 <legend>Discapacidades:</legend>
-                <label for="visual"><input name="discapacidades" id="visual" type="radio" class="radio-btn">Visual</label>
-                <label for="auditiva"><input name="discapacidades" id="auditiva" type="radio" class="radio-btn">Auditiva</label>
-                <label for="motora"><input name="discapacidades" id="motora" type="radio" class="radio-btn">Motora</label>
-                <label for="otro-disc"><input name="discapacidades" id="otro-disc" type="radio" class="radio-btn">Otro<input name="discapacidades" class="col-s-7 otro" type="text"></label>
+                <label for="visual">
+                    <input name="discapacidades" id="visual" type="radio" class="radio-btn" formControlName="disc">
+                    Visual</label>
+                <label for="auditiva">
+                    <input name="discapacidades" id="auditiva" type="radio" class="radio-btn" formControlName="disc">
+                    Auditiva</label>
+                <label for="motora">
+                    <input name="discapacidades" id="motora" type="radio" class="radio-btn" formControlName="disc">
+                    Motora</label>
+                <label for="otro-disc">
+                    <input name="discapacidades" id="otro-disc" type="radio" class="radio-btn" formControlName="disc">
+                    Otro<input name="discapacidades" class="col-s-7 otro" type="text" formControlName="disc_other">
+                </label>
             </fieldset>
         </article>
         <article id="horas-casa-sect">
             <div class="col-s-12">
                 <label for="horas-libres">Horas de tiempo libre semanales</label>
-                <select name="horas-libres" id="horas-libres">
+                <select name="horas-libres" id="horas-libres" formControlName="horas_libres">
                     <option value="0">Menos de 35.</option>
                     <option value="1">35-45.</option>
                     <option value="2">45-60.</option>
@@ -69,7 +87,7 @@
             </div>
             <div class="col-s-12">
                 <label for="tamanyo-casa">Tamaño aproximado de la casa</label>
-                <select name="tamanyo-casa" id="tamanyo-casa">
+                <select name="tamanyo-casa" id="tamanyo-casa" formControlName="tamanyo_casa">
                     <option value="0">Menos de 50m2</option>
                     <option value="1">50-80m2</option>
                     <option value="2">80-110m2</option>
@@ -81,14 +99,21 @@
         <article id="ultima-sect" class="col-s-11">
             <fieldset class="col-s-6">
                 <legend>¿Considera tener un estilo de vida más activo o sedentario?</legend>
-                <label for="activo"><input name="estilo-vida" id="activo" type="radio" class="radio-btn">Activo</label>
-                <label for="sedentario"><input name="estilo-vida" id="sedentario" type="radio" class="radio-btn">Sedentario</label>
+                <label for="activo">
+                    <input name="estilo-vida" id="activo" type="radio" class="radio-btn" formControlName="activo">
+                    Activo</label>
+                <label for="sedentario">
+                    <input name="estilo-vida" id="sedentario" type="radio" class="radio-btn" formControlName="activo">
+                    Sedentario</label>
             </fieldset>
             <div class="col-s-6">
                 <img src="./assets/images/location.png" alt="Cambiar ubicación botón">
                 <p>Carrer d’Spronceda, 257, 08027, Barcelona.</p>
                 <button name="ubicacion" id="ubicacion" class="button-1">Cambiar ubicación</button>
             </div>
+        </article>
+        <article id="submit-sect">
+            <button class="button-2" type="submit">Guardar datos</button>
         </article>
     </form>
 </section>
