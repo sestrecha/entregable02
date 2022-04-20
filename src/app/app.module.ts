@@ -8,11 +8,12 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PortadaComponent } from './portada/portada.component';
 import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
-import { PopUpComponent } from './rescate/pop-up/pop-up.component';
+
 import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
 import {RescateComponent} from "./rescate/rescate.component";
 import {SeguimientoComponent} from "./seguimiento/seguimiento.component";
+import { FormulariorescateComponent } from './rescate/formulariorescate/formulariorescate.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
@@ -25,8 +26,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     ModificarComponent,
     RescateComponent,
     SeguimientoComponent,
-    PopUpComponent,
     AdopcionComponent,
+    FormulariorescateComponent,
     ContactoComponent
   ],
   imports: [

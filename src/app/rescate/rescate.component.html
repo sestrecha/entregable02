@@ -4,9 +4,15 @@
   <h1 class="col-s-8">Nombre de la App</h1>
 </header>
 <section id="popup" *ngIf="ayuda">
-  <app-pop-up></app-pop-up>
   <button id="close" (click)="popUpAyuda()">X</button>
+  <h1 id="popup_h">Notificación de abandono</h1>
+  <p id="popup_p">¿Cómo desea proceder?</p>
+  <section id="botones">
+    <button class="button-1">Formulario</button>
+    <button class="button-1">Voz</button>
+  </section>
 </section>
+
 <section id="franja">
 
   <p id="franja_p">Rescate</p>
@@ -16,7 +22,7 @@
   <p class="col-s-12">¿Sabes que puedes ayudarnos a mejorar la vida de muchos animales? Aquí podrás ayudar a rescatar a los animales que puedas ver en peligro. Además, facilitamos los procesos de adopción para que puedas ofrecerles un hogar :) </p>
 </section>
 
-<button (click)="popUpAyuda()">NOTIFICAR</button>
+<button id="boton" (click)="popUpAyuda()">NOTIFICAR</button>
 
 <footer class="col-s-12">
   <div class="col-s-4"><a href="/rescate">Rescate</a></div>
