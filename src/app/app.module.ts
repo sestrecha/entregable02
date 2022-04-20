@@ -17,6 +17,7 @@ import { FormulariorescateComponent } from './rescate/formulariorescate/formular
 import { ContactoComponent } from './contacto/contacto.component';
 import { RescatemarchaComponent } from './rescate/rescatemarcha/rescatemarcha.component';
 import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
+import { CrearComponent } from './perfil/crear/crear.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
     FormulariorescateComponent,
     ContactoComponent,
     RescatemarchaComponent,
-    MasInfoComponent
+    MasInfoComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
