@@ -84,17 +84,15 @@
 #tl-section{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(255, 132, 115, 0.25);
+    //background-color: rgba(255, 132, 115, 0.25);
     margin: auto;
-    padding: auto;
+
     table{
-        table-layout:fixed
+        table-layout:fixed;
+        margin:auto;
+
     }
-    li{
-        text-align: center;
-        list-style-position: inside;
-        padding-left: 0;
-    }
+
     button{
         margin: 0px auto;
         border: 2px solid $oscuro;
@@ -111,9 +109,22 @@
         cursor: pointer;
     }
     foto{
-        display:block;
+        display:flex;
         margin-left:auto;
         margin-right:auto;
     }
+    img{
+        width:80%;
+    }
+    ul{
+        padding:0;
+        background-color: $amarillo;
+    }
+    td{
+        display:inline-flex;
+        margin-inline-start:5%;
+        
+    }
 
 }
+

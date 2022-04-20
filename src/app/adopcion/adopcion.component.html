@@ -29,7 +29,7 @@
 </section>
 
 
-<section id="lectura-section" class="col-s-10">
+<section id="lectura-section" class="col-s-11">
     <div id="div" class="col-s-12">
         <h2>Información para ti:</h2>
     </div>
@@ -38,11 +38,11 @@
     </div>
 </section>
 
-<section id="tl-section" class = "col-s-10">
-    <table id= "tabla" class="col-s-10">
+<section id="tl-section" class = "col-s-11">
+    <table id= "tabla" class="col-s-11">
     <tr *ngFor="let mascota of mascotas; let i=index;">
-        <td id="foto"><img src = {{mascota.foto}}></td>
-        <td id = "informasion">
+        <td id="foto" class="col-s-4"><img src = {{mascota.foto}}></td>
+        <td id = "informasion" class="col-s-3">
             <ul>
                 <li>{{mascota.nombre}}</li>
                 <li>{{mascota.tipo}}</li>
@@ -53,7 +53,7 @@
             </ul>
         </td>
         <td>
-            <a href="/adopcion/mas-info"><button>+info</button></a>
+            <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
         </td>
     </table>
 </section>

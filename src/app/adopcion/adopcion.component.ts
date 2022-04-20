@@ -21,10 +21,10 @@ export class AdopcionComponent implements OnInit {
   }
 
 
-  mascotas:Array<Mascota> = [new Mascota("assets/images/pfp.png", "Hembra", "Lina", "Gato", 2, "Mestizo", false, "Toledo"),
-                        new Mascota("assets/images/perfil_gato.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo"),
-                        new Mascota("assets/images/perfil_gato.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo"),
-                        new Mascota("assets/images/perfil_gato.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo"),];
+  mascotas:Array<Mascota> = [new Mascota("assets/images/pfp.png", "Hembra", "Lina", "Gato", 2, "Mestizo", false, "Toledo", false),
+                        new Mascota("assets/images/pfp.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo", true),
+                        new Mascota("assets/images/pfp.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo", false),
+                        new Mascota("assets/images/pfp.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo", true),];
 
 }
 
@@ -39,8 +39,9 @@ export class Mascota {
   raza:string; 
   boton:boolean;
   ciudad:string;
+  amarillo:boolean;
 
-  constructor(foto:any, nombre:string, tipo:string, sexo:string, edad:number, raza:string, boton:boolean, ciudad:string){
+  constructor(foto:any, nombre:string, tipo:string, sexo:string, edad:number, raza:string, boton:boolean, ciudad:string, amarillo:boolean){
     this.foto = foto;
     this.nombre = nombre;
     this.sexo = sexo;
@@ -49,5 +50,6 @@ export class Mascota {
     this.raza = raza;
     this.boton = boton;
     this.ciudad = ciudad
+    this.amarillo = amarillo
   }
 }
