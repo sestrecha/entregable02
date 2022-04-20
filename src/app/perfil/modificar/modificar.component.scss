@@ -7,17 +7,7 @@ label, legend{
     font-size: 18px;
 }
 
-input{
-    background-color: rgba(255, 132, 115, 0.25);
-    border: 1px solid $oscuro;
-    font-size: 14px;
-    &:focus{
-        box-shadow: 0 0 2px $salmon;
-        outline: none !important;
-        border-color: $salmon;
-        border-width: 2px;
-    }
-}
+
 
 select{
     background: $amarillo;
@@ -135,6 +125,14 @@ select{
         select{
             margin: auto;
         }
+    }
+}
+
+#submit-sect{
+    display: flex;
+    margin: 20px auto;
+    button{
+        margin: auto;
     }
 }
 

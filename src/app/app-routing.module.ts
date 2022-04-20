@@ -10,6 +10,7 @@ import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
 
 const routes: Routes = [
   { path:'perfil', component:PerfilComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path:'formulariorescate',  component:FormulariorescateComponent },
   { path:'adopcion', component:AdopcionComponent},
   { path:'contacto', component:ContactoComponent},
+  { path: 'adopcion/mas-info', component:MasInfoComponent},
   { path: '**', redirectTo: 'portada', pathMatch: 'full' }
 ];
 
