@@ -1,0 +1,135 @@
+<header>
+    <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
+    <h1 class="col-s-8">Nombre de la App</h1>
+</header>
+<section class="principal">
+    <section class="titulo-section col-s-12">
+        <h2>Modificar mis datos</h2>
+    </section>
+    <form> <!---[formGroup]="datos"--->
+        <article id="pfp-sect">
+            <div class="col-s-5">
+                <label for="pfp-file">Foto de perfil</label>
+                <img src="./assets/images/pfp.png" alt="Actual foto de perfil">
+                <button onclick="$('#pfp-file').click()" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
+                <input type="file" id="pfp" style="display:none" accept="image/*" formControlName="pfp">
+            </div>
+            <div class="col-s-5">
+                <label for="desc">Descripción</label>
+                <textarea name="desc" id="desc" cols="17" rows="6" formControlName="descripcion"></textarea>
+            </div>
+        </article>
+        <article id="contacto-sect" class="col-s-10">
+            <div>
+                <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
+                <input class="col-s-10" type="text" name="tlf" id="tlf" formControlName="tlf">
+            </div>
+        </article>
+        <article id="n-masc-sect" class="col-s-10">
+            <label for="n_masc">Número de mascotas</label>
+            <select name="n_masc" id="n_masc" formControlName="n_masc">
+                <option value="0">Ninguna</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">Más de tres</option>
+            </select>
+        </article>
+        <article id="radios-sect" class="col-s-11">
+            <fieldset class="col-s-6">
+                <legend>Tipo de hogar:</legend>
+                <label for="piso">
+                    <input name="hogar" id="piso" type="radio" class="radio-btn" formControlName="hogar">
+                    Piso</label>
+                <label for="jardin">
+                    <input name="hogar" id="jardin" type="radio" class="radio-btn" formControlName="hogar">
+                    Casa con jardín</label>
+                <label for="otro-hogar">
+                    <input name="hogar" id="otro-hogar" type="radio" class="radio-btn" formControlName="hogar">
+                    Otro<input name="hogar_other" class="col-s-7 otro" type="text" formControlName="hogar_other">
+                </label>
+            </fieldset>
+            <fieldset class="col-s-6">
+                <legend>Discapacidades:</legend>
+                <label for="visual">
+                    <input name="disc" id="visual" type="radio" class="radio-btn" formControlName="disc">
+                    Visual</label>
+                <label for="auditiva">
+                    <input name="disc" id="auditiva" type="radio" class="radio-btn" formControlName="disc">
+                    Auditiva</label>
+                <label for="motora">
+                    <input name="disc" id="motora" type="radio" class="radio-btn" formControlName="disc">
+                    Motora</label>
+                <label for="otro-disc">
+                    <input name="disc" id="otro-disc" type="radio" class="radio-btn" formControlName="disc">
+                    Otro<input name="disc" class="col-s-7 otro" type="text" formControlName="disc_other">
+                </label>
+            </fieldset>
+        </article>
+        <article id="horas-casa-sect">
+            <div class="col-s-12">
+                <label for="horas_libres">Horas de tiempo libre semanales</label>
+                <select name="horas_libres" id="horas_libres" formControlName="horas_libres">
+                    <option value="0">Menos de 35.</option>
+                    <option value="1">35-45.</option>
+                    <option value="2">45-60.</option>
+                    <option value="3">Más de 60.</option>
+                </select>
+            </div>
+            <div class="col-s-12">
+                <label for="tamanyo_casa">Tamaño aproximado de la casa</label>
+                <select name="tamanyo_casa" id="tamanyo_casa" formControlName="tamanyo_casa">
+                    <option value="0">Menos de 50m2</option>
+                    <option value="1">50-80m2</option>
+                    <option value="2">80-110m2</option>
+                    <option value="3">110-140m2</option>
+                    <option value="4">Más de 140m2</option>
+                </select>
+            </div>
+        </article>
+        <article id="ultima-sect" class="col-s-11">
+            <fieldset class="col-s-6">
+                <legend>¿Considera tener un estilo de vida más activo o sedentario?</legend>
+                <label for="activo">
+                    <input name="estilo" id="activo" type="radio" class="radio-btn" formControlName="estilo">
+                    Activo</label>
+                <label for="sedentario">
+                    <input name="estilo" id="sedentario" type="radio" class="radio-btn" formControlName="estilo">
+                    Sedentario</label>
+            </fieldset>
+            <div class="col-s-6">
+                <img src="./assets/images/location.png" alt="Cambiar ubicación botón">
+                <p>Carrer d’Spronceda, 257, 08027, Barcelona.</p>
+                <button name="ubicacion" id="ubicacion" class="button-1">Cambiar ubicación</button>
+            </div>
+        </article>
+        <article id="submit-sect">
+            <button class="button-2" type="submit">Guardar datos</button>
+        </article>
+    </form>
+</section>
+
+<footer class="col-s-12">
+    <article>
+        <div class="col-s-4"><a href="/rescate">Rescate</a></div>
+        <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
+        <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
+    </article>
+</footer>
+<!---<section id="difuminado" *ngIf="difuminar"></section>
+<section *ngIf="salir" id="popup-salir" class="pop-up">
+    <article class="col-s-8">
+        <button id="volver-btn" (click)="salirPopup()">X</button>
+        <div>
+            <h2>¿Volver al perfil?</h2>
+            <p>¿Seguro que quieres dejar de modificar tus datos? Los cambios 
+                no se guardarán a no ser que pulses sobre el botón de “guardar 
+                datos” de abajo.</p>
+        </div>
+        <div id="botones-salir">
+            <button class="button-1 col-s-5"><a href="/perfil">Salir sin guardar.</a></button>
+            <button (click)="salirPopup()" class="button-1 col-s-5">Seguir modificando.</button>
+        </div>
+    </article>
+</section>--->
