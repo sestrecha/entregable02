@@ -4,6 +4,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PortadaComponent } from './portada/portada.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { RescateComponent } from './rescate/rescate.component';
+import { RescatemarchaComponent } from './rescate/rescatemarcha/rescatemarcha.component';
 import { FormulariorescateComponent } from './rescate/formulariorescate/formulariorescate.component';
 import { PopUpIniComponent } from './portada/pop-up-ini/pop-up-ini.component';
 import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path:'perfil/modificar',  component:ModificarComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },
+  { path:'rescatemarcha',  component:RescatemarchaComponent },
   { path:'formulariorescate',  component:FormulariorescateComponent },
   { path:'adopcion', component:AdopcionComponent},
   { path:'contacto', component:ContactoComponent},

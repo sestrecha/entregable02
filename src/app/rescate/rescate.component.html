@@ -27,13 +27,13 @@
 </footer>
 
 <section class="difuminado" *ngIf="ayuda"></section>
-<section class="pop-up" id="popup" *ngIf="ayuda">
-  <button id="close" (click)="popUpAyuda()">X</button>
+<section class="pop-up" *ngIf="ayuda">
   <article>
-    <h1 id="popup_h">Notificación de abandono</h1>
+    <button id="close" (click)="popUpAyuda()">X</button>
+    <h1>Notificación de abandono</h1>
     <p id="popup_p">¿Cómo desea proceder?</p>
     <section id="botones">
-      <button class="button-1">Formulario</button>
+      <a href="/formulariorescate"><button class="button-1">Formulario</button></a>
       <button class="button-1">Voz</button>
     </section>
   </article>
