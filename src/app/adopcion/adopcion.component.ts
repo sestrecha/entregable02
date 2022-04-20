@@ -19,6 +19,8 @@ export class AdopcionComponent implements OnInit {
   popUpLectura(): void{
     this.lectura = !this.lectura;
   }
+
+
   mascotas:Array<Mascota> = [new Mascota("assets/images/pfp.png", "Hembra", "Lina", "Gato", 2, "Mestizo", false, "Toledo"),
                         new Mascota("assets/images/perfil_gato.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo"),
                         new Mascota("assets/images/perfil_gato.png", "Lina", "Hembra", "Gato", 2, "Mestizo", false, "Toledo"),

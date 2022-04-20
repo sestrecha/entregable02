@@ -16,6 +16,7 @@ import {RescateComponent} from "./rescate/rescate.component";
 import {SeguimientoComponent} from "./seguimiento/seguimiento.component";
 import { FormulariorescateComponent } from './rescate/formulariorescate/formulariorescate.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     SeguimientoComponent,
     AdopcionComponent,
     FormulariorescateComponent,
-    ContactoComponent
+    ContactoComponent,
+    MasInfoComponent
   ],
   imports: [
     BrowserModule,
