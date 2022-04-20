@@ -1,0 +1,56 @@
+
+#titulo{
+    display:flex;
+
+}
+
+#foto{
+    img{
+    max-width: 35%;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+}
+}
+
+h2{
+    text-align:center;
+    margin:auto;
+    margin-top: 1%
+}
+
+#informacion{
+    display: flex;
+    margin: auto;
+    ul{
+        margin:auto;
+        li{
+            text-align:center;
+        }
+    }
+    article{
+        display:flex;
+        flex-wrap: wrap;
+        margin: auto;
+        div{
+            display: flex;
+        }
+        img{
+            margin:auto;
+        }
+    }
+}
+
+#boton{
+    display:flex;
+    margin:auto;
+}
+
+#descripcion{
+    display:flex;
+    margin:auto;
+    margin-top:2%;
+    p{
+        text-align:center;
+    }
+}
