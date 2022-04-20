@@ -3,24 +3,10 @@
     <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
     <h1 class="col-s-8">Nombre de la App</h1>
 </header>
-<section id="popup-salir">
-    <article *ngIf="salir" class="col-s-8">
-        <button (click)="salirPopup()">X</button>
-        <div>
-            <h2>¿Volver al perfil?</h2>
-            <p>¿Seguro que quieres dejar de modificar tus datos? Los cambios 
-                no se guardarán a no ser que pulses sobre el botón de “guardar 
-                datos” de abajo.</p>
-        </div>
-        <div>
-            <button>Salir sin guardar.</button>
-            <button>Seguir modificando.</button>
-        </div>
-    </article>
-</section>
+
 <section id="principal">
     <section id="titulo-section" class="col-s-12">
-        <button><img src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior."></button>
+        <img (click)="salirPopup()" src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior.">
         <h2>Modificar mis datos</h2>
     </section>
     <form>
@@ -114,3 +100,19 @@
         <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
     </article>
 </footer>
+<section id="difuminado" *ngIf="difuminar"></section>
+<section *ngIf="salir" id="popup-salir">
+    <article class="col-s-8">
+        <button id="volver-btn" (click)="salirPopup()">X</button>
+        <div>
+            <h2>¿Volver al perfil?</h2>
+            <p>¿Seguro que quieres dejar de modificar tus datos? Los cambios 
+                no se guardarán a no ser que pulses sobre el botón de “guardar 
+                datos” de abajo.</p>
+        </div>
+        <div id="botones-salir">
+            <button class="button-1 col-s-5"><a href="/perfil">Salir sin guardar.</a></button>
+            <button (click)="salirPopup()" class="button-1 col-s-5">Seguir modificando.</button>
+        </div>
+    </article>
+</section>

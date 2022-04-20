@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModificarComponent implements OnInit {
   salir:boolean = false;
+  difuminar: boolean = false;
 
   constructor() { }
 
@@ -15,6 +16,7 @@ export class ModificarComponent implements OnInit {
 
   salirPopup(): void {
     this.salir = !this.salir;
+    this.difuminar = this.salir;
 
   }
 
