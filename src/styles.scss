@@ -165,3 +165,38 @@ footer{
     text-align: center;
     margin: auto;
 }
+
+.desplegable {
+    top: 0%;
+    position:absolute;
+    display: flex;
+    background: rgba(246, 247, 235, 0.9);
+    border: 2px solid $oscuro;
+    height: 100vh;
+    div{
+        display: flex;
+        height: 8vh;
+        img{
+            max-height: 60%;
+            margin: auto;
+            margin-left: 15%;
+        }
+    }
+    article{
+        width: 100%;
+        margin-top: 10vh;
+        a{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            margin: auto;
+        }
+        #destacado {
+            background: rgba(255, 132, 115, 0.50);
+            a {
+                color: $oscuro;
+            }
+        }
+    }
+}
