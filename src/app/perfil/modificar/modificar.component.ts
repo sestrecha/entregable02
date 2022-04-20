@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './modificar.component.html',
   styleUrls: ['./modificar.component.scss']
 })
-export class ModificarComponent implements OnInit {
+export class ModificarComponent{
   salir:boolean = false;
   difuminar: boolean = false;
   datos = new FormGroup({
@@ -14,25 +14,33 @@ export class ModificarComponent implements OnInit {
     descripcion : new FormControl(''),
     email : new FormControl('', [Validators.required,
       Validators.pattern("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
-    ])
-    
+    ]),
+    tlf : new FormControl(''),
+    n_masc : new FormControl(''),
+    hogar : new FormControl(''),
+    hogar_other : new FormControl(''),
+    disc : new FormControl(''),
+    disc_other : new FormControl(''),
+    horas_libres : new FormControl(''),
+    tamanyo_casa : new FormControl(''),
+    estilo : new FormControl('')
     
   })
+
+  constructor() { }
+
   get f()
   {
       return this.datos.controls;
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
-
   salirPopup(): void {
     this.salir = !this.salir;
     this.difuminar = this.salir;
+  }
+
+  submitForm(): void{
+    console.log('aaa')
 
   }
 
