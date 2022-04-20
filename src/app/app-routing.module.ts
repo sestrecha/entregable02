@@ -4,6 +4,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PortadaComponent } from './portada/portada.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { RescateComponent } from './rescate/rescate.component';
+import { RescatemarchaComponent } from './rescate/rescatemarcha/rescatemarcha.component';
 import { FormulariorescateComponent } from './rescate/formulariorescate/formulariorescate.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { CrearComponent } from './perfil/crear/crear.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path:'perfil/crear',  component:CrearComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },
+  { path:'rescatemarcha',  component:RescatemarchaComponent },
   { path:'formulariorescate',  component:FormulariorescateComponent },
   { path:'adopcion', component:AdopcionComponent},
   { path:'contacto', component:ContactoComponent},
