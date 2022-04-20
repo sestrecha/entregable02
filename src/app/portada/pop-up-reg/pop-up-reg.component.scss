@@ -1,5 +1,2 @@
-div {
-    background-color: rgba(52, 24, 39, 0.6);
-    width: 100%;
-    height: 100%;
-}
+@import "src/styles.scss";
+@import "src/app/portada/pop-up-ini/pop-up-ini.component.scss";

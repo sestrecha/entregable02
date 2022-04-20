@@ -3,29 +3,38 @@
   <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
   <h1 class="col-s-8">Nombre de la App</h1>
 </header>
-<section id="popup" *ngIf="ayuda">
-  <button id="close" (click)="popUpAyuda()">X</button>
-  <h1 id="popup_h">Notificación de abandono</h1>
-  <p id="popup_p">¿Cómo desea proceder?</p>
-  <section id="botones">
-    <button class="button-1">Formulario</button>
-    <button class="button-1">Voz</button>
+
+<section class="principal">
+  <section class="titulo-section col-s-12">
+    <p>Notificación de abandono</p>
   </section>
-</section>
 
-<section id="franja">
+  <section id="guia">
+    <p class="col-s-12">Guia para el rescate</p>
+    <p id="texto_p"class="col-s-12">Para poder notificar un abandono pulsa en el siguiente botón circular. Aparacerá un pop up para elegir hacerlo a traves de un formulario o con voz.
+      Tras hacer esto estarás en una nueva página en la cual podrás ver el estado del rescate y ponerte en contacto con la patrulla.</p>
+  </section>
 
-  <p id="franja_p">Rescate</p>
+  <button id="boton" (click)="popUpAyuda()">NOTIFICAR</button>
 </section>
-<section id="guia">
-  <p id="guia_p" class="col-s-12">Guia para el rescate</p>
-  <p class="col-s-12">¿Sabes que puedes ayudarnos a mejorar la vida de muchos animales? Aquí podrás ayudar a rescatar a los animales que puedas ver en peligro. Además, facilitamos los procesos de adopción para que puedas ofrecerles un hogar :) </p>
-</section>
-
-<button id="boton" (click)="popUpAyuda()">NOTIFICAR</button>
 
 <footer class="col-s-12">
-  <div class="col-s-4"><a href="/rescate">Rescate</a></div>
-  <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
-  <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
+  <article>
+    <div id="selected"  class="col-s-4"><a href="/rescate">Rescate</a></div>
+    <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
+    <div  class="col-s-4"><a href="/perfil">Perfil</a></div>
+  </article>
 </footer>
+
+<section class="difuminado" *ngIf="ayuda"></section>
+<section class="pop-up" *ngIf="ayuda">
+  <article>
+    <button id="close" (click)="popUpAyuda()">X</button>
+    <h1>Notificación de abandono</h1>
+    <p id="popup_p">¿Cómo desea proceder?</p>
+    <section id="botones">
+      <a href="/formulariorescate"><button class="button-1">Formulario</button></a>
+      <button class="button-1">Voz</button>
+    </section>
+  </article>
+</section>

@@ -1,6 +1,6 @@
 @import "src/styles.scss";
 
-p{
+#texto_p{
 
   display: flex;
   font-family: 'Inter';
@@ -17,7 +17,7 @@ p{
 
 #boton{
   background: rgba(255, 132, 115, 0.75);
-  display: flex;
+
   margin: 30px auto;
   padding: 2%;
   border-radius: 50%;
@@ -29,30 +29,10 @@ p{
   text-align: center;
 }
 
-
-#franja_p{
-
-  /* Botón light */
-  font-family: 'Inter';
-  font-weight: 600;
-  text-align: center;
-  /* Oscuro */
-  color: #341827;
-  margin:auto;
-
-}
-
-#franja{
-  margin: 30px auto;
-  display: flex;
-  height: 60px;
-  background: rgba(255, 132, 115, 0.75);
-}
-
 #guia{
 
 
-  height: 300px;
+  height: 350px;
   margin: 30px 30px auto;
   display:flex;
   flex-wrap: wrap;
@@ -66,8 +46,7 @@ p{
 
 }
 
-#guia_p{
-
+p{
   margin-top: 20px;
   margin-left: 20px;
   /* Botón light */
@@ -79,51 +58,32 @@ p{
 
 }
 
+-----------------------
+
 #popup_p{
-  margin: 70px 70px auto;
+  margin-top: 5%;
   text-align: center;
-  padding: 5%;
-  position: absolute;
-
 }
-#popup_h{
-
-  /* Título tocho */
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  margin: 10% 20% 30% 10%;
-  position: absolute;
-
-  /* Oscuro */
-  color: #341827;
-}
-
-#botones{
+#botones {
   display: flex;
-  margin: auto 40%;
-
+  margin: 20px 40px auto;
 }
 
-#popup{
-  position: absolute;
-  margin: 12% 12% auto;
-  display: flex;
 
-  background: #F6F7EB;
-  width: 75%;
-  height: 50%;
-
-
-}
 #close{
+
+  float: right;
   border-radius: 5px;
   background-color: $salmon;
   border-style: none;
   padding: 2px 7px;
-  display: block;
-  float: right;
-  position: absolute;
+
 }
+
+h1 {
+  text-align: center;
+}
+
+
 
 
