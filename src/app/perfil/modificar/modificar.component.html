@@ -8,7 +8,7 @@
         <img (click)="salirPopup()" src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior.">
         <h2>Modificar mis datos</h2>
     </section>
-    <form [formGroup]="datos">
+    <form [formGroup]="datos" (ngSubmit)="onSubmit()">
         <article id="pfp-sect">
             <div class="col-s-5">
                 <label for="pfp-file">Foto de perfil</label>
@@ -24,8 +24,12 @@
         <article id="contacto-sect" class="col-s-10">
             <div>
                 <label class="col-s-12" for="email">Correo electrónico:</label>
-                <input class="col-s-10" type="text" name="email" id="email" formControlName="email"
-                 [class.is-invalid]="f.email.touched && f.email.invalid" aria-describedby="emailHelp" >
+                <input class="col-s-10 form-control" [class.is-invalid]="f.email.touched && f.email.invalid" type="text" 
+                name="email" id="email" formControlName="email">
+                <div class="col-s-12" *ngIf="f.email.touched && f.email.invalid">
+                    <small class="text-danger rip" *ngIf="f.email.errors?.required">Email obligatorio.</small>
+                    <small class="text-danger rip" *ngIf="f.email.errors?.pattern">Email tiene que tener la estructura "nombre.subdominio.dominio".</small>
+                </div>
             </div>
             <div>
                 <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
