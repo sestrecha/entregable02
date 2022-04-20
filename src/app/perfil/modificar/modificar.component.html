@@ -13,7 +13,7 @@
             <div class="col-s-5">
                 <label for="pfp-file">Foto de perfil</label>
                 <img src="./assets/images/pfp.png" alt="Actual foto de perfil">
-                <button (click)="abrirPfp($event)" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
+                <button type="button" onclick="$('pfp').click()" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
                 <input type="file" id="pfp" style="display:none" accept="image/*" formControlName="pfp">
             </div>
             <div class="col-s-5">
@@ -25,16 +25,16 @@
             <div>
                 <label class="col-s-12" for="email">Correo electrónico:</label>
                 <input class="col-s-10 form-control" [class.is-invalid]="f.email.touched && f.email.invalid" type="text" 
-                name="email" id="email" formControlName="email">
+                name="email" id="email" formControlName="email" placeholder="Introduce tu email:">
                 <div class="col-s-12" *ngIf="f.email.touched && f.email.invalid">
                     <small class="text-danger rip" *ngIf="f.email.errors?.required">Email obligatorio.</small>
-                    <small class="text-danger rip" *ngIf="f.email.errors?.pattern">Email tiene que tener la estructura "nombre.subdominio.dominio".</small>
+                    <small class="text-danger rip" *ngIf="f.email.errors?.pattern">El email tiene que tener la estructura "nombre@subdominio.dominio".</small>
                 </div>
             </div>
             <div>
                 <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
                 <input class="col-s-10 form-control" [class.is-invalid]="f.tlf.touched && f.tlf.invalid" 
-                type="text" name="tlf" id="tlf" formControlName="tlf">
+                type="text" name="tlf" id="tlf" formControlName="tlf" placeholder="Introduce tu teléfono:">
                 <div class="col-s-12" *ngIf="f.tlf.touched && f.tlf.invalid">
                     <small class="text-danger rip" *ngIf="f.tlf.errors?.required">Teléfono obligatorio.</small>
                     <small class="text-danger rip" *ngIf="f.tlf.errors?.pattern">El teléfono ha de tener 9 caracteres.</small>
@@ -55,29 +55,32 @@
             <fieldset class="col-s-6">
                 <legend>Tipo de hogar:</legend>
                 <label for="piso">
-                    <input name="hogar" id="piso" type="radio" class="radio-btn" formControlName="hogar">
+                    <input id="piso" type="radio" value="piso" class="radio-btn" formControlName="hogar">
                     Piso</label>
                 <label for="jardin">
-                    <input name="hogar" id="jardin" type="radio" class="radio-btn" formControlName="hogar">
+                    <input id="jardin" type="radio" value="jardin" class="radio-btn" formControlName="hogar">
                     Casa con jardín</label>
                 <label for="otro-hogar">
-                    <input name="hogar" id="otro-hogar" type="radio" class="radio-btn" formControlName="hogar">
-                    Otro<input name="hogar_other" class="col-s-7 otro" type="text" formControlName="hogar_other">
+                    <input id="otro-hogar" type="radio" value="otro" class="radio-bt" formControlName="hogar">
+                    Otro<input class="col-s-7 otro" type="text" formControlName="hogar_other">
                 </label>
             </fieldset>
             <fieldset class="col-s-6">
                 <legend>Discapacidades:</legend>
+                <label for="ninguna">
+                    <input name="disc" id="ninguna" type="radio" value="ninguna" class="radio-btn" formControlName="disc">
+                    Ninguna</label>
                 <label for="visual">
-                    <input name="disc" id="visual" type="radio" class="radio-btn" formControlName="disc">
+                    <input name="disc" id="visual" type="radio" value="visual" class="radio-btn" formControlName="disc">
                     Visual</label>
                 <label for="auditiva">
-                    <input name="disc" id="auditiva" type="radio" class="radio-btn" formControlName="disc">
+                    <input name="disc" id="auditiva" type="radio" value="auditiva" class="radio-btn" formControlName="disc">
                     Auditiva</label>
                 <label for="motora">
-                    <input name="disc" id="motora" type="radio" class="radio-btn" formControlName="disc">
+                    <input name="disc" id="motora" type="radio" value="motora" class="motora" formControlName="disc">
                     Motora</label>
                 <label for="otro-disc">
-                    <input name="disc" id="otro-disc" type="radio" class="radio-btn" formControlName="disc">
+                    <input name="disc" id="otro-disc" type="radio" value="otro" class="radio-btn" formControlName="disc">
                     Otro<input name="disc" class="col-s-7 otro" type="text" formControlName="disc_other">
                 </label>
             </fieldset>
@@ -103,20 +106,20 @@
                 </select>
             </div>
         </article>
-        <article id="ultima-sect" class="col-s-11">
+        <article id="ultima-sect" class="col-s-11 form-group">
             <fieldset class="col-s-6">
                 <legend>¿Considera tener un estilo de vida más activo o sedentario?</legend>
                 <label for="activo">
-                    <input name="estilo" id="activo" type="radio" class="radio-btn" formControlName="estilo">
+                    <input name="estilo" id="activo" type="radio" value="activo" class="radio-btn" formControlName="estilo">
                     Activo</label>
                 <label for="sedentario">
-                    <input name="estilo" id="sedentario" type="radio" class="radio-btn" formControlName="estilo">
+                    <input name="estilo" id="sedentario" type="radio" value="sedentario" class="radio-btn " formControlName="estilo">
                     Sedentario</label>
             </fieldset>
             <div class="col-s-6">
                 <img src="./assets/images/location.png" alt="Cambiar ubicación botón">
-                <p>Carrer d’Spronceda, 257, 08027, Barcelona.</p>
-                <button name="ubicacion" id="ubicacion" class="button-1">Cambiar ubicación</button>
+                <label class="col-s-12" for="ubicacion">Ubicación</label>
+                <textarea name="ubicacion" id="ubicacion" cols="12" rows="2"></textarea>
             </div>
         </article>
         <article id="submit-sect">
