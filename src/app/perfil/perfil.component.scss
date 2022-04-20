@@ -81,6 +81,7 @@
 }
 
 #contacto-section{
+    margin: auto;
     article{
         margin: auto;
         display: flex;
@@ -96,24 +97,20 @@
 }
 
 #btn-section{
+    display: flex;
+    margin: auto;
     a{
+        margin: auto;
         display: flex;
         text-decoration: none;
-        button{
-            margin: 75px auto;
-            border: 2px solid $oscuro;
-            box-sizing: border-box;
-            border-radius: 5px;
-            background-color: $amarillo;
-            padding: 8px 15px;
-            font-family: 'Source Sans Pro';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 31px;
-            text-align: center;
-            cursor: pointer;
-        }
+    }
+}
+
+#seguimiento{
+    text-align: center;
+    margin-top: 30px;
+    a {
+        text-decoration: none;
     }
 }
 

@@ -94,3 +94,57 @@ footer{
         margin: auto;
     }
 }
+
+.button-2{
+    margin: 10px auto;
+    border: 2px solid $oscuro;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: $amarillo;
+    padding: 8px 15px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 31px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.principal{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 82vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.difuminado{
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(52, 24, 39, 0.5);;
+}
+
+.pop-up{
+    position:absolute;
+    display: flex;
+    top: 10%;
+    article{
+        margin: auto;
+        background-color: $claro;
+        padding: 20px 20px;
+    }
+}
+
+.titulo-section{
+    display: flex;
+    background-color: rgba(255, 132, 115, 0.75);
+    padding: 10px 5px;
+    *{
+        margin: auto;
+        text-align: center;
+    }
+}

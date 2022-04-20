@@ -13,6 +13,7 @@ import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
 import {RescateComponent} from "./rescate/rescate.component";
 import {SeguimientoComponent} from "./seguimiento/seguimiento.component";
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {SeguimientoComponent} from "./seguimiento/seguimiento.component";
     RescateComponent,
     SeguimientoComponent,
     PopUpComponent,
-    AdopcionComponent
+    AdopcionComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

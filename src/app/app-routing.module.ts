@@ -9,6 +9,7 @@ import { PopUpRegComponent } from './portada/pop-up-reg/pop-up-reg.component';
 import { PopUpComponent } from './rescate/pop-up/pop-up.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 const routes: Routes = [
   { path:'perfil', component:PerfilComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },
   { path:'adopcion', component:AdopcionComponent},
+  { path:'contacto', component:ContactoComponent},
   { path: '**', redirectTo: 'portada', pathMatch: 'full' }
 ];
 
