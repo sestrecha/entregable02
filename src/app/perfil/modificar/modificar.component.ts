@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-modificar',
@@ -15,7 +16,8 @@ export class ModificarComponent{
     email : new FormControl('', [Validators.required,
       Validators.pattern("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
     ]),
-    tlf : new FormControl('', [Validators.minLength(8), Validators.maxLength(10)]),
+    tlf : new FormControl('', [Validators.required,
+    Validators.pattern("[0-9]{9}")]),
     n_masc : new FormControl(''),
     hogar : new FormControl(''),
     hogar_other : new FormControl(''),
@@ -39,8 +41,15 @@ export class ModificarComponent{
     this.difuminar = this.salir;
   }
 
+  abrirPfp(event: any): void{
+    event.preventDefault(); 
+    $('#pfp').click();
+  }
+
   onSubmit(){
-    console.log('aaa');
+    if (this.datos.valid) {
+      console.log("Form Submitted!");
+    }
 
   }
 

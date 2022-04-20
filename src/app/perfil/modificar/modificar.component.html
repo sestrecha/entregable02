@@ -13,7 +13,7 @@
             <div class="col-s-5">
                 <label for="pfp-file">Foto de perfil</label>
                 <img src="./assets/images/pfp.png" alt="Actual foto de perfil">
-                <button onclick="$('#pfp-file').click()" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
+                <button (click)="abrirPfp($event)" name="pfp-file" id="pfp-file" class="button-1">Cambiar foto</button>
                 <input type="file" id="pfp" style="display:none" accept="image/*" formControlName="pfp">
             </div>
             <div class="col-s-5">
@@ -33,7 +33,12 @@
             </div>
             <div>
                 <label class="col-s-12" for="tlf">Teléfono de contacto:</label>
-                <input class="col-s-10" type="text" name="tlf" id="tlf" formControlName="tlf">
+                <input class="col-s-10 form-control" [class.is-invalid]="f.tlf.touched && f.tlf.invalid" 
+                type="text" name="tlf" id="tlf" formControlName="tlf">
+                <div class="col-s-12" *ngIf="f.tlf.touched && f.tlf.invalid">
+                    <small class="text-danger rip" *ngIf="f.tlf.errors?.required">Teléfono obligatorio.</small>
+                    <small class="text-danger rip" *ngIf="f.tlf.errors?.pattern">El teléfono ha de tener 9 caracteres.</small>
+                </div>
             </div>
         </article>
         <article id="n-masc-sect" class="col-s-10">
