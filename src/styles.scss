@@ -160,3 +160,86 @@ footer{
         text-align: center;
     }
 }
+
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 80%;
+  margin: 30px auto;
+  /* Amarillo */
+  background: $amarillo;
+
+  /* Oscuro */
+  border: 2px solid #341827;
+  box-sizing: border-box;
+}
+.fotos_boxes{
+
+  display: flex;
+  margin: auto;
+}
+.texto_boxes{
+
+  /* Botón light */
+  font-family: 'Inter';
+  font-weight: 600;
+  display: flex;
+
+  /* Oscuro */
+  color: #341827;
+  margin: 2% 2% 10% 10%;
+
+}
+
+.form_{
+  margin-left: 50px;
+  margin-bottom: 40px;
+
+}
+.select_{
+
+  width: 60%;
+  background: #FFF2B3;
+  margin: 20px 20px auto ;
+  display: flex;
+  /* Oscuro */
+  border: 2px solid #341827;
+  box-sizing: border-box;
+}
+
+.input_{
+  background-color: rgba(255, 132, 115, 0.25);
+  /* Oscuro */
+  border: 1px solid $oscuro;
+  font-size: 14px;
+  margin: auto 20px ;
+
+  &:focus{
+    box-shadow: 0 0 2px $salmon;
+    outline: none !important;
+    border-color: $salmon;
+    border-width: 2px;
+  }
+
+}
+
+checkbox{
+  margin-right: 20%;
+}
+
+.button_rosa{
+  background: rgba(255, 132, 115, 0.75);
+  margin: auto;
+  padding: 2%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+
+
+}
+
+
+
+
