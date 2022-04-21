@@ -13,6 +13,7 @@ export class CrearComponent implements OnInit {salir:boolean = false;
   difuminar: boolean = false;
 
   username:any;
+  usuario: any;
   datos: any;
 
   formulario:any;
@@ -23,6 +24,7 @@ export class CrearComponent implements OnInit {salir:boolean = false;
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.username = this.data.currentUser;
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
@@ -63,7 +65,6 @@ export class CrearComponent implements OnInit {salir:boolean = false;
     if (this.formulario.valid) {
       this.datos.pfp = this.f.pfp.value;
       this.datos.descripcion = this.f.descripcion.value;
-      this.datos.email = this.f.email.value;
       this.datos.tlf = this.f.tlf.value;
       this.datos.n_masc = this.f.n_masc.value;
       if (this.f.hogar.value == "otro"){
@@ -80,8 +81,8 @@ export class CrearComponent implements OnInit {salir:boolean = false;
       this.datos.tamanyo_casa = this.f.tamanyo_casa.value;
       this.datos.estilo = this.f.estilo.value;
       this.datos.ubicacion = this.f.ubicacion.value;
+      
       this.datos.guardarUsuario()
-
       $('<a href="/perfil"></a>')[0].click();
     }
   }
