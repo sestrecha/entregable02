@@ -40,17 +40,7 @@ select{
         label{
             text-align: center;
         }
-        textarea{
-            background-color: rgba(255, 132, 115, 0.25);
-            border: 1px solid $oscuro;
-            font-size: 14px;
-            &:focus{
-                box-shadow: 0 0 2px $salmon;
-                outline: none !important;
-                border-color: $salmon;
-                border-width: 2px;
-            }
-        }
+
         *{
             margin: 3px auto;
         }
@@ -161,11 +151,12 @@ select{
         margin: auto;
         img{
             max-width: 20%;
-            margin: 5px auto;
         }
-        label, p{
+        label{
             text-align: center;
-            margin: 5px auto;
+        }
+        *{
+            margin: 2px auto;
         }
     }
 }

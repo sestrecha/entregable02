@@ -7,20 +7,26 @@ import { RescateComponent } from './rescate/rescate.component';
 import { RescatemarchaComponent } from './rescate/rescatemarcha/rescatemarcha.component';
 import { FormulariorescateComponent } from './rescate/formulariorescate/formulariorescate.component';
 import { ModificarComponent } from './perfil/modificar/modificar.component';
+import { CrearComponent } from './perfil/crear/crear.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { PrivacidadComponent } from './privacidad/privacidad.component';
+import { AboutComponent } from './about/about.component';
 import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
 
 const routes: Routes = [
   { path:'perfil', component:PerfilComponent },
   { path:'portada', component:PortadaComponent },
   { path:'perfil/modificar',  component:ModificarComponent },
+  { path:'perfil/crear',  component:CrearComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },
   { path:'rescatemarcha',  component:RescatemarchaComponent },
   { path:'formulariorescate',  component:FormulariorescateComponent },
   { path:'adopcion', component:AdopcionComponent},
   { path:'contacto', component:ContactoComponent},
+  { path:'privacidad', component:PrivacidadComponent},
+  { path:'about', component:AboutComponent},
   { path: 'adopcion/mas-info', component:MasInfoComponent},
   { path: '**', redirectTo: 'portada', pathMatch: 'full' }
 ];
