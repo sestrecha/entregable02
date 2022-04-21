@@ -26,6 +26,7 @@ export class PopUpRegComponent implements OnInit {
   }
 
   usuario:any;
+  username:any;
   formulario = new FormGroup({
     usuario : new FormControl(''),
     email : new FormControl('', [Validators.required,
@@ -56,6 +57,8 @@ export class PopUpRegComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.data.currentUser.subscribe(user => this.username = user)
+  }
 
 }

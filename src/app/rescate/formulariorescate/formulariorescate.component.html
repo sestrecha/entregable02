@@ -59,7 +59,7 @@
   </article>
 </footer>
 
-<section id="difuminado"></section>
+<section class="difuminado" *ngIf="salir"></section>
 <section *ngIf="salir" id="popup-salir" class="pop-up">
     <article class="col-s-8">
         <button id="close" (click)="popUpSalir()">X</button>

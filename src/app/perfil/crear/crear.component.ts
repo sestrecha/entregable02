@@ -24,7 +24,7 @@ export class CrearComponent implements OnInit {salir:boolean = false;
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
-    this.username = this.data.currentUser;
+    this.data.currentUser.subscribe(user => this.username = user)
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
