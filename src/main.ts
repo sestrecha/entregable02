@@ -25,13 +25,13 @@ export class Usuario{
   estilo: string;
   ubicacion: string;
 
-  constructor(username: string, password: string, pfp:string,desription:string,email: string, 
+  constructor(username: string, password: string, pfp:string,description:string, email: string, 
     tlf: string, n_masc: string, hogar: string, disc: string, horas_libres: string, 
     tamanyo_casa: string, estilo: string, ubicacion: string){
       this.username = username;
       this.password = password;
       this.pfp = pfp;
-      this.description = desription;
+      this.description = description;
       this.email = email;
       this.tlf = tlf;
       this.n_masc = n_masc;
