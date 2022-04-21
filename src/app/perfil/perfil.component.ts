@@ -35,7 +35,7 @@ export class PerfilComponent implements OnInit {
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       user = JSON.parse(user)
-      this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
+      this.datos = new Usuario('user2', user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
       user['hogar'], user['disc'], user['horas_libres'], user['tamanyo_casa'], user['estilo'], user['ubicacion'])
     }
     console.log(user)

@@ -11,7 +11,8 @@
         <div class="col-s-6">
             <img id="ayuda" (click)="popUpAyuda()" src="./assets/images/ayuda.png" alt="Botón de ayuda sobre la página.">
             <h2 class="col-s-12">@{{username}}</h2>
-            <p class="col-s-12">{{datos.desc}}</p>
+            <ng-template [ngIf]="datos.description!==''" [ngIfElse]="defecto"><p class="col-s-12">{{datos.description}}</p></ng-template>
+            <ng-template #defecto><p>No hay decripción disponible.</p></ng-template>
         </div>
     </section>
     <section id="datos-section">

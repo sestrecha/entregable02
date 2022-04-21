@@ -4,6 +4,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import * as $ from 'jquery'
+
 if (environment.production) {
   enableProdMode();
 }
@@ -45,11 +47,11 @@ export class Usuario{
     localStorage.setItem(this.username, JSON.stringify(this))
   }
 }
-
+/*
 let user = new Usuario('usuario','1234','','','mail@gmail.com','999999999',
 '','','','','','','')
 localStorage.setItem(user.username, JSON.stringify(user))
-
+*/
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 

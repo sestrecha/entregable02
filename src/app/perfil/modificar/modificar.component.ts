@@ -27,7 +27,7 @@ export class ModificarComponent implements OnInit{
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
-    this.data.currentUser.subscribe(user => this.username = user)
+    //this.data.currentUser.subscribe(user => this.username = user)
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
@@ -70,6 +70,7 @@ export class ModificarComponent implements OnInit{
 
   onSubmit(){
     if (this.formulario.valid) {
+      console.log('aa');
       this.datos.pfp = this.f.pfp.value;
       this.datos.descripcion = this.f.descripcion.value;
       this.datos.email = this.f.email.value;
