@@ -7,6 +7,10 @@ label, legend{
     font-size: 18px;
 }
 
+a{
+    text-decoration: none;
+}
+
 select{
     background: $amarillo;
     border: 2px solid $oscuro;

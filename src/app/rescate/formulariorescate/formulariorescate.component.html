@@ -5,16 +5,16 @@
 </header>
 <section class="principal">
   <section class="titulo-section col-s-12">
-    <img src="/assets/images/BOTÓN%20LEFT.png" (click)="popUpSalir()" id="boton_salir">
+    <img src="/assets/images/BOTÓN%20LEFT.png" (click)="popUpSalir()" id="boton_salir" alt="Boton para ir a la página anterior">
     <p>Notificación de abandono</p>
   </section>
 
   <form class="form_">
     <div>
-      <p>Activar geolocalización</p>
+      <label>Activar geolocalización</label>
       <input type="checkbox" class="check">
     </div>
-    <p>¿De que animal se trata?</p>
+    <label>¿De que animal se trata?</label>
     <select class="select_">
       <option>Perro</option>
 
@@ -23,7 +23,7 @@
       <option>idk</option>
     </select>
 
-    <p>¿Está herido?</p>
+    <label>¿Está herido?</label>
     <select class="select_">
       <option>Si, tiene una pata herida</option>
 
@@ -31,20 +31,20 @@
 
       <option>idk</option>
     </select>
-    <p>Añadir breve descripción</p>
+    <label>Añadir breve descripción</label>
     <div>
-      <p class="texto">Tamaño:</p>
+      <label class="texto">Tamaño:</label>
       <input class="col-s-10 input_" type="text">
     </div>
     <div>
-      <p class="texto">Pelaje:</p>
+      <label class="texto">Pelaje:</label>
       <input class="col-s-10 input_" type="text">
     </div>
-    <p>¿Puedes proporcionar una foto del animal?</p>
+    <label>¿Puedes proporcionar una foto del animal?</label>
     <div>
-      <p class="texto">Sí, activar cámara</p>
+      <label class="texto">Sí, activar cámara</label>
       <input type="checkbox" class="check">
-      <p class="texto">No</p>
+      <label class="texto">No</label>
       <input type="checkbox" class="check">
     </div>
   </form>

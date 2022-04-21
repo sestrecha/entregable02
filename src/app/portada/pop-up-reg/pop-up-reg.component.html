@@ -1,7 +1,7 @@
 <section class="difuminado"></section>
 <section class="pop-up col-s-12">
     <article>
-        <button id="volver-btn">X</button>
+        <button id="volver-btn"(click)="closeReg()">X</button>
         <h1>Crea tu nueva cuenta</h1>
         <form>
             <label for="usuario">Nombre de usuario</label><br>
@@ -15,8 +15,6 @@
             <button class="button-1 col-s-5"><p>Crear cuenta</p></button>
         </form>
         <p>¿Ya tienes una cuenta creada?</p>
-        <a href="">Haz click aquí para iniciar sesión.</a>
+        <p class="click" (click)="goToIni()">Haz click aquí para iniciar sesión.</p>
     </article>
 </section>
-
-

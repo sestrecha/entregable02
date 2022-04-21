@@ -1,6 +1,6 @@
 @import "src/styles.scss";
 
-p{
+label{
 
   /* Botón light */
   font-family: 'Inter';
@@ -12,6 +12,19 @@ p{
   margin: 20px auto;
 
 }
+p{
+
+
+  /* Botón light */
+  font-family: 'Inter';
+  font-weight: 600;
+  display: flex;
+
+  /* Oscuro */
+  color: #341827;
+  margin: 20px auto;
+
+  }
 div{
   display: flex;
 }

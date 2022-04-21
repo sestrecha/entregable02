@@ -1,7 +1,7 @@
 <section class="difuminado"></section>
 <section class="pop-up col-s-12">
     <article>
-        <button id="volver-btn">X</button>
+        <button id="volver-btn" (click)="closeIni()">X</button>
         <h1>Inicia sesión</h1>
         <form>
             <label for="mail">Correo electrónico</label><br>
@@ -11,6 +11,6 @@
             <button class="button-1 col-s-5"><p>Entrar</p></button>
         </form>
         <p>¿Aún no tienes una cuenta?</p>
-        <a href="">Haz click aquí para registrarte.</a>
+        <p class="click" (click)="goToReg()">Haz click aquí para registrarte.</p>
     </article>
 </section>
