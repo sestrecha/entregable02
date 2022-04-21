@@ -36,6 +36,20 @@ body{
     background-color: $claro;
 }
 
+h2{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+a:hover{
+    color: $salmon;
+}
+
 /* Menú de arriba */
 header {
     display: flex;
