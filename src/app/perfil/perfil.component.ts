@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/main';
 
 @Component({
   selector: 'app-perfil',
@@ -21,13 +22,24 @@ export class PerfilComponent implements OnInit {
   }
   
   ayuda: boolean;
+  username: string = "usuario"
+
+  datos: any;
 
   constructor() {
     this.ayuda = false;
    }
 
   ngOnInit(): void {
+    let user: any = localStorage.getItem(this.username);
+    if (user != null){
+      user = JSON.parse(user)
+      this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
+      user['hogar'], user['disc'], user['horas_libres'], user['tamanyo_casa'], user['estilo'], user['ubicacion'])
+    }
+    console.log(user)
   }
+    
 
   popUpAyuda(): void{
     this.ayuda = !this.ayuda;
