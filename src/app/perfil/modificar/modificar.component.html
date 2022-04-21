@@ -8,7 +8,7 @@
         <img (click)="salirPopup()" src="./assets/images/atras.png" alt="Botón de volver hacia la página anterior.">
         <h2>Modificar mis datos</h2>
     </section>
-    <form [formGroup]="datos" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <article id="pfp-sect">
             <div class="col-s-5">
                 <label for="pfp-file">Foto de perfil</label>
@@ -18,7 +18,7 @@
             </div>
             <div class="col-s-5">
                 <label for="desc">Descripción</label>
-                <textarea name="desc" id="desc" cols="17" rows="6" formControlName="descripcion"></textarea>
+                <textarea name="desc" id="desc" cols="17" rows="6" placeholder="Cuéntanos algo sobre ti." formControlName="descripcion"></textarea>
             </div>
         </article>
         <article id="contacto-sect" class="col-s-10">
@@ -119,11 +119,11 @@
             <div class="col-s-6">
                 <img src="./assets/images/location.png" alt="Cambiar ubicación botón">
                 <label class="col-s-12" for="ubicacion">Ubicación</label>
-                <textarea name="ubicacion" id="ubicacion" cols="12" rows="2"></textarea>
+                <textarea name="ubicacion" id="ubicacion" cols="12" rows="2" formControlName="ubicacion"></textarea>
             </div>
         </article>
         <article id="submit-sect">
-            <button class="button-2" type="submit">Guardar datos</button>
+            <button class="button-2" type="submit">>Guardar datos</button>
         </article>
     </form>
 </section>
