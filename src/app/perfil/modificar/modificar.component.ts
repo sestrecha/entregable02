@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import * as $ from 'jquery';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from 'src/main';
 
 @Component({
   selector: 'app-modificar',
   templateUrl: './modificar.component.html',
   styleUrls: ['./modificar.component.scss']
 })
-export class ModificarComponent{
+
+
+
+export class ModificarComponent implements OnInit{
   salir:boolean = false;
   difuminar: boolean = false;
 
-  datos = new FormGroup({
+  username: string = "usuario";
+  datos: any;
+
+  formulario = new FormGroup({
     pfp : new FormControl(''),
     descripcion : new FormControl(''),
     email : new FormControl('', [Validators.required,
@@ -27,16 +33,27 @@ export class ModificarComponent{
     disc_other : new FormControl(),
     horas_libres : new FormControl(),
     tamanyo_casa : new FormControl(),
-    estilo : new FormControl('sedentario', Validators.required)
+    estilo : new FormControl('sedentario', Validators.required),
+    ubicacion : new FormControl()
     
   })
 
-  constructor(private fb: FormBuilder) { }
 
+
+  constructor() { }
+
+  ngOnInit(): void {
+    let user: any = localStorage.getItem(this.username);
+    if (user != null){
+      this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
+      user['hogar'], user['disc'], user['horas_libres'], user['tamanyo_casa'], user['estilo'], user['ubicacion'])
+    }
+    
+  }
 
   get f()
   {
-      return this.datos.controls;
+      return this.formulario.controls;
   }
 
   salirPopup(): void {
@@ -45,11 +62,30 @@ export class ModificarComponent{
   }
 
   onSubmit(){
-    console.log(this.datos.value);
-    if (this.datos.valid) {
-      console.log(this.f.estilo);
+    if (this.formulario.valid) {
+      this.datos.pfp = this.f.pfp.value;
+      this.datos.descripcion = this.f.descripcion.value;
+      this.datos.email = this.f.email.value;
+      this.datos.tlf = this.f.tlf.value;
+      this.datos.n_masc = this.f.n_masc.value;
+      if (this.f.hogar.value == "otro"){
+        this.datos.hogar = this.f.hogar_other.value;
+      }else{
+        this.datos.hogar = this.f.hogar.value;
+      }
+      if (this.f.disc.value == "otro"){
+        this.datos.disc = this.f.disc_other.value;
+      }else{
+        this.datos.disc = this.f.disc.value;
+      }
+      this.datos.horas_libres = this.f.horas_libres.value;
+      this.datos.tamanyo_casa = this.f.tamanyo_casa.value;
+      this.datos.estilo = this.f.estilo.value;
+      this.datos.ubicacion = this.f.ubicacion.value;
+      
+      this.datos.guardarUsuario()
     }
-
   }
-
 }
+
+
