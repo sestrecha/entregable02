@@ -1,5 +1,5 @@
 <header>
-  <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+  <img (click)="displayMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
   <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
   <h1 class="col-s-8">Nombre de la App</h1>
 </header>
@@ -42,10 +42,10 @@
     </div>
     <p>¿Puedes proporcionar una foto del animal?</p>
     <div>
-      <input type="checkbox" class="check">
       <p class="texto">Sí, activar cámara</p>
       <input type="checkbox" class="check">
       <p class="texto">No</p>
+      <input type="checkbox" class="check">
     </div>
   </form>
 
@@ -70,6 +70,22 @@
             <button class="button-1 col-s-5"><a href="/rescate">Salir.</a></button>
             <button (click)="popUpSalir()" class="button-1 col-s-5">Seguir en la página.</button>
         </div>
+    </article>
+</section>
+
+<!--menu desplegable-->
+<section class="difuminado" *ngIf="difuminar"></section>
+<section class="desplegable col-s-8" *ngIf="menu">
+    <div>
+        <img (click)="hideMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    </div>
+    <article>
+        <div id="destacado"><a href="/rescate">Rescate</a></div>
+        <div><a href="/adopcion">Adopción</a></div>
+        <div><a href="/perfil">Perfil</a></div>
+        <div><a href="/about">Sobre Nosotros</a></div>
+        <div><a href="/privacidad">Privacidad</a></div>
+        <div><a href="/contacto">Contacto</a></div>
     </article>
 </section>
 
