@@ -61,13 +61,14 @@
 }
 
 #btn-section{
+    display:flex;
     a{
         display: flex;
         text-decoration: none;
 
     }
     button{
-        margin: 0px auto;
+        margin: auto;
         border: 2px solid $oscuro;
         box-sizing: border-box;
         border-radius: 5px;
@@ -132,4 +133,9 @@
 #fondito{
     background-color: aquamarine;
     width:100%;
+}
+
+#boton_seccion{
+    display:flex;
+    margin:auto;
 }

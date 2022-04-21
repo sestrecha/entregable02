@@ -5,7 +5,7 @@
 </header>
 
 <section id="difuminado" *ngIf="lectura"></section>
-<section id="popup-lectura" class="popup">
+<section id="popup-lectura">
     <article *ngIf="lectura" class="col-s-8">
         <div>
             <h2>¿Estás preparado para adoptar?</h2>
@@ -28,7 +28,7 @@
     </article>
 </section>
 
-
+<section class="principal">
 <section id="lectura-section" class="col-s-11">
     <div id="div" class="col-s-12">
         <h2>Información para ti:</h2>
@@ -37,9 +37,11 @@
         <a><button id="lectura" (click)="popUpLectura()">¿Estás preparado para adoptar?<br>¿Qué animales se ajustan más a ti?</button></a>
     </div>
 </section>
-<section class="button-2">
-    <h2>Filtrar</h2>
+
+<section id="boton_seccion" class="col-s-12">
+<button class="button-2" (click)="popUpFiltro()">Filtrar</button>
 </section>
+
 <section id="tl-section" class = "col-s-11">
     <table id= "tabla" class="col-s-11">
 
@@ -61,6 +63,7 @@
     
     </table>
 </section>
+</section>
 
 <footer class="col-s-12">
     <article>
@@ -69,3 +72,8 @@
         <div class="col-s-4"><a href="/perfil">Perfil</a></div>
     </article>
 </footer>
+
+<!-- llamada a componente hijo-->
+<section *ngIf="filtro"><app-filtrar></app-filtrar></section>
+
+<!-- popup lectura-->

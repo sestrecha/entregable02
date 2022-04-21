@@ -1,0 +1,74 @@
+<section class="difuminado"></section>
+<section class="pop-up col-s-12">
+    <article class="col-s-10">
+        <a href="/adopcion"><button id="volver-btn">X</button></a>
+        <h1>Aplicar filtros</h1>
+        <section id="inputs">
+            <!--columna de la izq-->
+        <fieldset class="col-s-6">
+            <legend>Tipo de mascota:</legend>
+            <label for="perro">
+                <input id="perro" [(ngModel)]="answer" type="radio" value="perro" class="radio-btn" formControlName="tipo">
+                Perro</label>
+            <label for="gato">
+                <input id="gato" type="radio" value="gato" class="radio-btn" formControlName="tipo">
+                Gato</label>
+            <label for="otro">
+                <input id="otro" type="radio" value="otro" class="radio-btn" formControlName="tipo">
+                Otro</label>
+
+                
+            <legend>Tamaño:</legend>
+            <label for="pequeño">
+                <input id="pequeño" type="radio" value="pequeño" class="radio-btn" formControlName="tamaño">
+                Pequeño</label>
+            <label for="mediano">
+                <input id="mediano" type="radio" value="mediano" class="radio-btn" formControlName="tamaño">
+                Mediano</label>
+            <label for="grande">
+                <input id="grande" type="radio" value="grande" class="radio-btn" formControlName="tamaño">
+                Grande</label>
+
+            <legend>Sexo:</legend>
+            <label for="hembra">
+                <input id="hembra" type="radio" value="hembra" class="radio-btn" formControlName="sexo">
+                Hembra</label>
+            <label for="macho">
+                <input id="macho" type="radio" value="macho" class="radio-btn" formControlName="sexo">
+                Macho</label>
+            
+        </fieldset>
+            <!--Columna de la derecha-->
+        <fieldset class="col-s-6">
+            <legend>Edad:</legend>
+            <label for="cachorro">
+                <input id="cachorro" type="radio" value="cachorro" class="radio-btn" formControlName="edad">
+                Menos de 1 año</label>
+            <label for="joven">
+                <input id="joven" type="radio" value="joven" class="radio-btn" formControlName="edad">
+                Entre 1-3 años</label>
+            <label for="anciano">
+                <input id="anciano" type="radio" value="anciano" class="radio-btn" formControlName="edad">
+                +5 años</label>
+
+                
+            <legend>Distancia:</legend>
+            <label for="cerca">
+                <input id="cerca" type="radio" value="cerca" class="radio-btn" formControlName="distancia">
+                Menos de 25 km</label>
+            <label for="media">
+                <input id="media" type="radio" value="media" class="radio-btn" formControlName="distancia">
+                Entre 25-50 km</label>
+            <label for="lejos">
+                <input id="lejos" type="radio" value="lejos" class="radio-btn" formControlName="distancia">
+                Entre 50-100 km</label>
+            <label for="muylejos">
+                <input id="muylejos" type="radio" value="muylejos" class="radio-btn" formControlName="distancia">
+                +100 km</label>
+        </fieldset>
+    </section>
+    <section id="boton_seccion" class="col-s-10">
+        <button class="button-2">Aplicar filtros</button>
+    </section>
+    </article>
+</section>

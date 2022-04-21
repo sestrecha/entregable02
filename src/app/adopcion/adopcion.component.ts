@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class AdopcionComponent implements OnInit {
   lectura:boolean;
+  filtro:boolean;
 
   constructor() {
     this.lectura = false;
+    this.filtro = false;
    }
 
   ngOnInit(): void {
@@ -18,6 +20,10 @@ export class AdopcionComponent implements OnInit {
 
   popUpLectura(): void{
     this.lectura = !this.lectura;
+  }
+
+  popUpFiltro(): void{
+    this.filtro = !this.filtro;
   }
 
 
