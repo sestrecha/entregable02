@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-pop-up-reg',
@@ -50,6 +51,7 @@ export class PopUpRegComponent implements OnInit {
       "", "", "", "", "")
       
       this.usuario.guardarUsuario()
+      $('<a href="/perfil/crear"></a>')[0].click();
     }
   }
 
