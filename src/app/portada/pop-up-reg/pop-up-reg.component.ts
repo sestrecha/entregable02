@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
+import { DataService } from 'src/app/data.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -38,7 +39,7 @@ export class PopUpRegComponent implements OnInit {
     
   })
   
-  constructor() { }
+  constructor(private data: DataService) { }
 
   get f()
   {
@@ -49,7 +50,7 @@ export class PopUpRegComponent implements OnInit {
     if (this.formulario.valid) {
       this.usuario = new Usuario(this.f.usuario.value, this.f.pass.value, "", "", this.f.email.value, "", "", "",
       "", "", "", "", "")
-      
+      this.data.updateUser(this.f.usuario.value)
       this.usuario.guardarUsuario()
       $('<a href="/perfil/crear"></a>')[0].click();
     }
