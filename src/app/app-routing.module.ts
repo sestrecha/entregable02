@@ -13,6 +13,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PrivacidadComponent } from './privacidad/privacidad.component';
 import { AboutComponent } from './about/about.component';
 import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
+import { FiltrarComponent } from './adopcion/filtrar/filtrar.component';
 
 const routes: Routes = [
   { path:'perfil', component:PerfilComponent },

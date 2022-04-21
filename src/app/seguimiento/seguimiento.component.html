@@ -1,5 +1,5 @@
 <header>
-  <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+  <img (click)="displayMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
   <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
   <h1 class="col-s-8">Nombre de la App</h1>
 </header>
@@ -43,9 +43,24 @@
 
 <footer class="col-s-12">
   <article>
-    <div id="selected"  class="col-s-4"><a href="/rescate">Rescate</a></div>
+    <div class="col-s-4"><a href="/rescate">Rescate</a></div>
     <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
-    <div  class="col-s-4"><a href="/perfil">Perfil</a></div>
+    <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
   </article>
 </footer>
 
+<!--menu desplegable-->
+<section class="difuminado" *ngIf="difuminar"></section>
+<section class="desplegable col-s-8" *ngIf="menu">
+    <div>
+        <img (click)="hideMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    </div>
+    <article>
+        <div><a href="/rescate">Rescate</a></div>
+        <div><a href="/adopcion">Adopción</a></div>
+        <div id="destacado"><a href="/perfil">Perfil</a></div>
+        <div><a href="/about">Sobre Nosotros</a></div>
+        <div><a href="/privacidad">Privacidad</a></div>
+        <div><a href="/contacto">Contacto</a></div>
+    </article>
+</section>

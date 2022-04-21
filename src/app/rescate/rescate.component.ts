@@ -6,6 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rescate.component.scss']
 })
 export class RescateComponent implements OnInit {
+  // menu desplegable
+  menu:boolean = false;
+  difuminar:boolean = false;
+  
+  displayMenu(): void {
+    this.menu = true;
+    this.difuminar = true;
+  }
+
+  hideMenu(): void {
+    this.menu = false;
+    this.difuminar = false;
+  }
+
   ayuda: boolean;
   constructor() {
     this.ayuda = false;

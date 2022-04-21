@@ -20,6 +20,7 @@ import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
 import { CrearComponent } from './perfil/crear/crear.component';
 import { PrivacidadComponent } from './privacidad/privacidad.component';
 import { AboutComponent } from './about/about.component';
+import { FiltrarComponent } from './adopcion/filtrar/filtrar.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutComponent } from './about/about.component';
     MasInfoComponent,
     CrearComponent,
     PrivacidadComponent,
-    AboutComponent
+    AboutComponent,
+    FiltrarComponent
   ],
   imports: [
     BrowserModule,

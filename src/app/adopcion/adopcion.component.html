@@ -1,11 +1,11 @@
 <header>
-    <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    <img (click)="displayMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
     <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
     <h1 class="col-s-8">Nombre de la App</h1>
 </header>
 
 <section id="difuminado" *ngIf="lectura"></section>
-<section id="popup-lectura" class="popup">
+<section id="popup-lectura">
     <article *ngIf="lectura" class="col-s-8">
         <div>
             <h2>¿Estás preparado para adoptar?</h2>
@@ -28,7 +28,7 @@
     </article>
 </section>
 
-
+<section class="principal">
 <section id="lectura-section" class="col-s-11">
     <div id="div" class="col-s-12">
         <h2>Información para ti:</h2>
@@ -37,9 +37,11 @@
         <a><button id="lectura" (click)="popUpLectura()">¿Estás preparado para adoptar?<br>¿Qué animales se ajustan más a ti?</button></a>
     </div>
 </section>
-<section class="button-2">
-    <h2>Filtrar</h2>
+
+<section id="boton_seccion" class="col-s-12">
+<button class="button-2" (click)="popUpFiltro()">Filtrar</button>
 </section>
+
 <section id="tl-section" class = "col-s-11">
     <table id= "tabla" class="col-s-11">
 
@@ -61,6 +63,7 @@
     
     </table>
 </section>
+</section>
 
 <footer class="col-s-12">
     <article>
@@ -69,3 +72,23 @@
         <div class="col-s-4"><a href="/perfil">Perfil</a></div>
     </article>
 </footer>
+
+<!-- llamada a componente hijo-->
+<section *ngIf="filtro"><app-filtrar></app-filtrar></section>
+
+<!-- popup lectura-->
+<!--menu desplegable-->
+<section class="difuminado" *ngIf="difuminar"></section>
+<section class="desplegable col-s-8" *ngIf="menu">
+    <div>
+        <img (click)="hideMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    </div>
+    <article>
+        <div><a href="/rescate">Rescate</a></div>
+        <div id="destacado"><a href="/adopcion">Adopción</a></div>
+        <div><a href="/perfil">Perfil</a></div>
+        <div><a href="/about">Sobre Nosotros</a></div>
+        <div><a href="/privacidad">Privacidad</a></div>
+        <div><a href="/contacto">Contacto</a></div>
+    </article>
+</section>

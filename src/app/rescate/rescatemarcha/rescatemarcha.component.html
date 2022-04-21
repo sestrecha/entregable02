@@ -1,5 +1,5 @@
 <header>
-  <img id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+  <img (click)="displayMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
   <img src="./assets/images/logo.png" alt="Logotipo de la aplicación.">
   <h1 class="col-s-8">Nombre de la App</h1>
 </header>
@@ -7,13 +7,17 @@
   <section class="titulo-section col-s-12">
     <p>Rescate en marcha</p>
   </section>
+  <h1>Notificación enviada</h1>
+  <p>Estado del rescate</p>
   <section class="boxes">
     <img class="fotos_boxes" src="./assets/images/mapa%201.png">
   </section>
+  <p>Contactar con la patrulla</p>
   <section class="boxes">
     <img class="fotos_boxes" src="./assets/images/llamada-telefonica%201.png">
     <p class="texto_boxes">Pulse el telefono para ponerse en contacto con la patrulla</p>
   </section>
+  <button class="button_rosa"><a href="/portada">Rescate finalizado</a></button>
 </section>
 
 <footer class="col-s-12">
@@ -24,4 +28,19 @@
   </article>
 </footer>
 
+<!--menu desplegable-->
+<section class="difuminado" *ngIf="difuminar"></section>
+<section class="desplegable col-s-8" *ngIf="menu">
+    <div>
+        <img (click)="hideMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
+    </div>
+    <article>
+        <div id="destacado"><a href="/rescate">Rescate</a></div>
+        <div><a href="/adopcion">Adopción</a></div>
+        <div><a href="/perfil">Perfil</a></div>
+        <div><a href="/about">Sobre Nosotros</a></div>
+        <div><a href="/privacidad">Privacidad</a></div>
+        <div><a href="/contacto">Contacto</a></div>
+    </article>
+</section>
 

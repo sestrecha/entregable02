@@ -7,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AdopcionComponent implements OnInit {
+  // menu desplegable
+  menu:boolean = false;
+  difuminar:boolean = false;
+  
+  displayMenu(): void {
+    this.menu = true;
+    this.difuminar = true;
+  }
+
+  hideMenu(): void {
+    this.menu = false;
+    this.difuminar = false;
+  }
+
   lectura:boolean;
+  filtro:boolean;
 
   constructor() {
     this.lectura = false;
+    this.filtro = false;
    }
 
   ngOnInit(): void {
@@ -18,6 +34,10 @@ export class AdopcionComponent implements OnInit {
 
   popUpLectura(): void{
     this.lectura = !this.lectura;
+  }
+
+  popUpFiltro(): void{
+    this.filtro = !this.filtro;
   }
 
 

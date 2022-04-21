@@ -1,0 +1,27 @@
+@import "src/styles.scss";
+@import "src/app/portada/pop-up-ini/pop-up-ini.component.scss";
+
+#inputs{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align:left;
+fieldset{
+    
+    border-width: 0px;
+    padding: 0px;
+    text-align:left;
+    legend, label{
+        display: block;
+    }
+    label{
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+}
+#boton_seccion{
+    display:flex;
+    margin:auto;
+}

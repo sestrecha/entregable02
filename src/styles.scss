@@ -26,6 +26,7 @@ $salmon: #FF8473;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 p{
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -96,6 +97,9 @@ footer{
             font-size: 24px;
             text-align: center;
             margin: auto;
+        }
+        a:active{
+            color: $claro;
         }
         #selected{
             background-color: rgba(255, 132, 115, 0.60);
@@ -203,6 +207,9 @@ footer{
             font-weight: 700;
             font-size: 24px;
             margin: auto;
+        }
+        a:active{
+            color: $salmon;
         }
         #destacado {
             background: rgba(255, 132, 115, 0.50);

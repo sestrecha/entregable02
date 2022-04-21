@@ -6,11 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulariorescate.component.scss']
 })
 export class FormulariorescateComponent implements OnInit {
+  
+  // menu desplegable
+  menu:boolean = false;
+  difuminar:boolean = false;
+  
+  displayMenu(): void {
+    this.menu = true;
+    this.difuminar = true;
+  }
 
-  constructor() { }
+  hideMenu(): void {
+    this.menu = false;
+    this.difuminar = false;
+  }
+
+  salir: boolean;
+  constructor() {
+    this.salir = false;
+  }
 
   ngOnInit(): void {
   }
-
+  popUpSalir(): void{
+    this.salir = !this.salir;
+  }
 
 }
+
