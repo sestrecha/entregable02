@@ -6,11 +6,26 @@ p{
   font-family: 'Inter';
   font-weight: 600;
   display: flex;
+  text-align: center;
 
   /* Oscuro */
   color: #341827;
   margin: 20px auto;
 
+}
+
+h1{
+
+  /* Título tocho */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+  display: flex;
+
+  /* Oscuro */
+  color: #341827;
 }
 
 

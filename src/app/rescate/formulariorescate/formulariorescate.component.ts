@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulariorescateComponent implements OnInit {
 
-  constructor() { }
+  salir: boolean;
+  constructor() {
+    this.salir = false;
+  }
 
   ngOnInit(): void {
   }
-
+  popUpSalir(): void{
+    this.salir = !this.salir;
+  }
 
 }
+
