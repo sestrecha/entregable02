@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
+import { DataService } from 'src/app/data.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -23,9 +24,10 @@ export class ModificarComponent implements OnInit{
   
 
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentUser.subscribe(user => this.username = user)
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],

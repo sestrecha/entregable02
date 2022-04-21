@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/main';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-perfil',

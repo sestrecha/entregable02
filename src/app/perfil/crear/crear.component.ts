@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
+import { DataService } from 'src/app/data.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -19,7 +20,7 @@ export class CrearComponent implements OnInit {salir:boolean = false;
   
 
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
     let user: any = localStorage.getItem(this.username);
@@ -79,8 +80,8 @@ export class CrearComponent implements OnInit {salir:boolean = false;
       this.datos.tamanyo_casa = this.f.tamanyo_casa.value;
       this.datos.estilo = this.f.estilo.value;
       this.datos.ubicacion = this.f.ubicacion.value;
-      
       this.datos.guardarUsuario()
+
       $('<a href="/perfil"></a>')[0].click();
     }
   }
