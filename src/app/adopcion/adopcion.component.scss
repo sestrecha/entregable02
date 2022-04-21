@@ -55,13 +55,11 @@
         margin: 1%;
         h2{
             text-align: center;
-            margin-top: 5px;
         }
     }
 }
 
 #btn-section{
-    display:flex;
     a{
         display: flex;
         text-decoration: none;
@@ -111,27 +109,31 @@
         text-align: center;
         cursor: pointer;
     }
-    foto{
+    article{
         display:flex;
-        margin-left:auto;
-        margin-right:auto;
+        img{
+            width:80%;
+            margin:auto;
+        }
+        ul{
+            padding:0;
+            margin-left:25%;
+        }
+        td{
+            display:inline-flex;
+        }
+        a{
+            margin:auto;
+        }
     }
-    img{
-        width:80%;
-    }
-    ul{
-        padding:0;
-    }
-    td{
-        display:inline-flex;
-        margin-inline-start:5%;
-        
-    }
-
 }
 
-#fondito{
-    background-color: aquamarine;
+#fondo_salmon{
+    background-color: rgba(255, 132, 115, 0.25);
+    width:100%;
+}
+#fondo_amarillo{
+    background-color: $claro; 
     width:100%;
 }
 
@@ -139,3 +141,8 @@
     display:flex;
     margin:auto;
 }
+
+h2{
+    font-weight:650;
+}
+

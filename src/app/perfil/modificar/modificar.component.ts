@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
+import * as $ from 'jquery'
 
 @Component({
   selector: 'app-modificar',
@@ -17,27 +18,9 @@ export class ModificarComponent implements OnInit{
   username: string = "usuario";
   datos: any;
 
-  formulario = new FormGroup({
-    pfp : new FormControl(''),
-    descripcion : new FormControl(''),
-    email : new FormControl('', [Validators.required,
-      Validators.pattern("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:\
-        [a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
-    ]),
-    tlf : new FormControl('', [Validators.required,
-    Validators.pattern("[0-9]{9}")]),
-    n_masc : new FormControl(),
-    hogar : new FormControl(),
-    hogar_other : new FormControl(),
-    disc : new FormControl(),
-    disc_other : new FormControl(),
-    horas_libres : new FormControl(),
-    tamanyo_casa : new FormControl(),
-    estilo : new FormControl('sedentario', Validators.required),
-    ubicacion : new FormControl()
-    
-  })
+  formulario:any;
 
+  
 
 
   constructor() { }
@@ -48,6 +31,28 @@ export class ModificarComponent implements OnInit{
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
       user['hogar'], user['disc'], user['horas_libres'], user['tamanyo_casa'], user['estilo'], user['ubicacion'])
     }
+
+    this.formulario = new FormGroup({
+      pfp : new FormControl(this.datos.pfp),
+      descripcion : new FormControl(this.datos.descripcion),
+      email : new FormControl(this.datos.email, [Validators.required,
+        Validators.pattern("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:\
+          [a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
+      ]),
+      tlf : new FormControl(this.datos.tlf, [Validators.required,
+      Validators.pattern("[0-9]{9}")]),
+      n_masc : new FormControl(this.datos.n_masc),
+      hogar : new FormControl(this.datos.hogar),
+      hogar_other : new FormControl(this.datos.hogar),
+      disc : new FormControl(this.datos.disc),
+      disc_other : new FormControl(this.datos.disc),
+      horas_libres : new FormControl(this.datos.horas_libres),
+      tamanyo_casa : new FormControl(this.datos.tamanyo_casa),
+      estilo : new FormControl(this.datos.estilo),
+      ubicacion : new FormControl(this.datos.ubicacion)
+      
+    })
+  
     
   }
 
@@ -84,6 +89,8 @@ export class ModificarComponent implements OnInit{
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
+      console.log('ole')
+      $('<a href="/perfil"></a>')[0].click();
     }
   }
 }
