@@ -1,7 +1,12 @@
 @import "src/styles.scss";
 #titulo{
     display:flex;
+    margin:auto;
 
+}
+
+h2{
+    font-weight:650;
 }
 
 #foto{
@@ -54,3 +59,4 @@ h2{
         text-align:center;
     }
 }
+

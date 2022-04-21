@@ -39,28 +39,50 @@
 </section>
 
 <section id="boton_seccion" class="col-s-12">
+<section id="filter">
+    <p>Filtrar por:</p>
+    <input type="text" placeholder="(Tipo de mascota, nombre, sexo, raza o ciudad)"  [(ngModel)]="searchInput" (ngModelChange)="updateDisplay()">
+</section>
 <button class="button-2" (click)="popUpFiltro()">Filtrar</button>
 </section>
 
 <section id="tl-section" class = "col-s-11">
-    <table id= "tabla" class="col-s-11">
+    <table id= "tabla" class="col-s-12">    
+        <tr *ngFor="let mascota of display_mascotas; let i=index;">
+            <article id = "fondo_salmon" class="col-s-11" *ngIf="isEven(i)">
+                <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
+                <td id = "informasion" class="col-s-3">
+                    <ul>
+                        <li>{{mascota.nombre}}</li>
+                        <li>{{mascota.tipo}}</li>
+                        <li>{{mascota.sexo}}</li>
+                        <li>{{mascota.edad}} años</li>
+                        <li>{{mascota.raza}}</li>
+                        <li>{{mascota.ciudad}}</li>
+                    </ul>
+                </td>
+                <td>
+                    <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
+                </td>
+            </article>
 
-    <tr *ngFor="let mascota of mascotas; let i=index;">
-        <td id="foto" class="col-s-4"><img src = {{mascota.foto}}></td>
-        <td id = "informasion" class="col-s-3">
-            <ul>
-                <li>{{mascota.nombre}}</li>
-                <li>{{mascota.tipo}}</li>
-                <li>{{mascota.sexo}}</li>
-                <li>{{mascota.edad}} años</li>
-                <li>{{mascota.raza}}</li>
-                <li>{{mascota.ciudad}}</li>
-            </ul>
-        </td>
-        <td>
-            <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
-        </td>
-    
+            <article id = "fondo_amarillo" class="col-s-11" *ngIf="!isEven(i)">
+                <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
+                <td id = "informasion" class="col-s-3">
+                    <ul>
+                        <li>{{mascota.nombre}}</li>
+                        <li>{{mascota.tipo}}</li>
+                        <li>{{mascota.sexo}}</li>
+                        <li>{{mascota.edad}} años</li>
+                        <li>{{mascota.raza}}</li>
+                        <li>{{mascota.ciudad}}</li>
+                    </ul>
+                </td>
+                <td>
+                    <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
+                </td>
+            </article>
+        </tr>
     </table>
 </section>
 </section>
@@ -74,7 +96,7 @@
 </footer>
 
 <!-- llamada a componente hijo-->
-<section *ngIf="filtro"><app-filtrar></app-filtrar></section>
+<app-filtrar *ngIf="filtro"></app-filtrar>
 
 <!-- popup lectura-->
 <!--menu desplegable-->
