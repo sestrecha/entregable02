@@ -37,9 +37,12 @@
         <a><button id="lectura" (click)="popUpLectura()">¿Estás preparado para adoptar?<br>¿Qué animales se ajustan más a ti?</button></a>
     </div>
 </section>
-
+<section class="button-2">
+    <h2>Filtrar</h2>
+</section>
 <section id="tl-section" class = "col-s-11">
     <table id= "tabla" class="col-s-11">
+
     <tr *ngFor="let mascota of mascotas; let i=index;">
         <td id="foto" class="col-s-4"><img src = {{mascota.foto}}></td>
         <td id = "informasion" class="col-s-3">
@@ -55,6 +58,7 @@
         <td>
             <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
         </td>
+    
     </table>
 </section>
 
