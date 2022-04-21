@@ -5,6 +5,7 @@
 </header>
 <section class="principal">
   <section class="titulo-section col-s-12">
+    <img src="/assets/images/BOTÓN%20LEFT.png" (click)="popUpSalir()" id="boton_salir">
     <p>Notificación de abandono</p>
   </section>
 
@@ -57,6 +58,20 @@
     <div  class="col-s-4"><a href="/perfil">Perfil</a></div>
   </article>
 </footer>
+
+<section id="difuminado"></section>
+<section *ngIf="salir" id="popup-salir" class="pop-up">
+    <article class="col-s-8">
+        <button id="close" (click)="popUpSalir()">X</button>
+          <h1>¿Cancelar notificación?</h1>
+          <p>¿Seguro que quieres dejar de notificar el rescate? Los cambios
+              no se guardarán y el rescate quedará cancelado.</p>
+        <div >
+            <button class="button-1 col-s-5"><a href="/rescate">Salir.</a></button>
+            <button (click)="popUpSalir()" class="button-1 col-s-5">Seguir en la página.</button>
+        </div>
+    </article>
+</section>
 
 <!--menu desplegable-->
 <section class="difuminado" *ngIf="difuminar"></section>

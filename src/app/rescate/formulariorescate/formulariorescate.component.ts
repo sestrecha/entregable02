@@ -21,10 +21,16 @@ export class FormulariorescateComponent implements OnInit {
     this.difuminar = false;
   }
 
-  constructor() { }
+  salir: boolean;
+  constructor() {
+    this.salir = false;
+  }
 
   ngOnInit(): void {
   }
-
+  popUpSalir(): void{
+    this.salir = !this.salir;
+  }
 
 }
+

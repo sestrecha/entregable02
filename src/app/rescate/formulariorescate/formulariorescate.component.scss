@@ -28,3 +28,18 @@ text-align: center;
 /* Oscuro */
 color: #341827;}
 
+#close{
+
+  float: right;
+  border-radius: 5px;
+  background-color: $salmon;
+  border-style: none;
+  padding: 2px 7px;
+
+}
+
+#boton_salir{
+  display: block;
+  float: left;
+}
+
