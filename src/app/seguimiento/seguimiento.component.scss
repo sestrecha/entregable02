@@ -1,5 +1,17 @@
 @import "src/styles.scss";
 
+label{
+
+  /* Botón light */
+  font-family: 'Inter';
+  font-weight: 600;
+  display: flex;
+
+  /* Oscuro */
+  color: #341827;
+  margin: 20px auto;
+
+}
 p{
 
   /* Botón light */

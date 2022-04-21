@@ -186,6 +186,7 @@ footer{
     top: 0%;
     position:absolute;
     display: flex;
+    flex-wrap: wrap;
     background: rgba(246, 247, 235, 0.9);
     border: 2px solid $oscuro;
     height: 100vh;
@@ -194,13 +195,13 @@ footer{
         height: 8vh;
         img{
             max-height: 60%;
-            margin: auto;
-            margin-left: 15%;
+            margin-left: 4%;
+            margin-top: 4%;
         }
     }
     article{
+        margin-top: -40vh;
         width: 100%;
-        margin-top: 10vh;
         a{
             text-decoration: none;
             font-style: normal;
