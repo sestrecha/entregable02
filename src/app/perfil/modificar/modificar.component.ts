@@ -70,7 +70,6 @@ export class ModificarComponent implements OnInit{
 
   onSubmit(){
     if (this.formulario.valid) {
-      console.log('aa');
       this.datos.pfp = this.f.pfp.value;
       this.datos.descripcion = this.f.descripcion.value;
       this.datos.email = this.f.email.value;
@@ -92,7 +91,7 @@ export class ModificarComponent implements OnInit{
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
-      $('<a href="/adopcion"></a>')[0].click();
+      $('<a href="/perfil"></a>')[0].click();
     }
   }
 }
