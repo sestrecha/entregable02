@@ -28,9 +28,12 @@ p{
 div{
   display: flex;
 }
+
+a:hover{
+  color: $claro;
+}
+
 .texto{
-
-
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;

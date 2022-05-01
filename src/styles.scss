@@ -46,9 +46,13 @@ h3{
     font-size: 20px;
 }
 
-a:hover{
-    color: $salmon;
+a{
+    text-decoration: none;
+    &:hover{
+        color: $salmon;
+    }
 }
+
 
 /* Menú de arriba */
 header {
@@ -273,7 +277,7 @@ footer{
 }
 .select_{
 
-  width: 100%;
+  width: 90%;
   background: #FFF2B3;
   margin: 20px 20px auto ;
   display: flex;
