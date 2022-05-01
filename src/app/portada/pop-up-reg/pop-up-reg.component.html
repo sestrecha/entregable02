@@ -11,10 +11,10 @@
             <input class="col-s-10 form-control" [class.is-invalid]="f.email.touched && f.email.invalid" type="text" 
             name="email" id="email" formControlName="email" placeholder="Introduce tu email:"><br>
             <label for="pass">Contraseña</label><br>
-            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass.touched && f.pass.invalid" type="text"
+            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass.touched && f.pass.invalid" type="password"
             name="pass" id="pass" formControlName="pass" placeholder="Introduce una contraseña:"><br>
             <label for="pass_rep">Repetir contraseña</label><br>
-            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass_rep.touched && f.pass_rep.invalid" type="text"
+            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass_rep.touched && f.pass_rep.invalid" type="password"
             name="pass_rep" id="pass_rep" formControlName="pass_rep" placeholder="Repetir contraseña:"><br>
             <button class="button-1 col-s-5" type="submit"><p>Crear cuenta</p></button>
         </form>
