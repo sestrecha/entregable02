@@ -13,12 +13,11 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PrivacidadComponent } from './privacidad/privacidad.component';
 import { AboutComponent } from './about/about.component';
 import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
-import { FiltrarComponent } from './adopcion/filtrar/filtrar.component';
 
 const routes: Routes = [
-  { path:'perfil', component:PerfilComponent },
+  { path:'entregable02/perfil', component:PerfilComponent },
   { path:'portada', component:PortadaComponent },
-  { path:'perfil/modificar',  component:ModificarComponent },
+  { path:'entregable02/perfil/modificar',  component:ModificarComponent },
   { path:'perfil/crear',  component:CrearComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },
