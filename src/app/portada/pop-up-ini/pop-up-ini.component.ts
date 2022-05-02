@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Usuario } from 'src/main';
 import { DataService } from 'src/app/data.service';
-import * as $ from 'jquery';
+import {Router} from '@angular/router';
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-pop-up-ini',
@@ -41,13 +41,14 @@ export class PopUpIniComponent implements OnInit {
 
   onSubmit(){
     if (this.formulario.valid) {
-      $('<a href="/perfil"></a>')[0].click();
+      this.router.navigateByUrl('/perfil')
+      //$('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 
   
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.data.currentUser.subscribe(user => this.username = user)

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
 import { DataService } from 'src/app/data.service';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-modificar',
@@ -24,7 +25,7 @@ export class ModificarComponent implements OnInit{
   
 
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private router: Router) { }
 
   ngOnInit(): void {
     //this.data.currentUser.subscribe(user => this.username = user)
@@ -91,7 +92,8 @@ export class ModificarComponent implements OnInit{
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
-      $('<a href="/perfil"></a>')[0].click();
+      this.router.navigateByUrl('/perfil')
+      //$('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 }

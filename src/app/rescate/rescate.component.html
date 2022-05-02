@@ -20,9 +20,9 @@
 
 <footer class="col-s-12">
   <article>
-    <div id="selected"  class="col-s-4"><a href="/rescate">Rescate</a></div>
-    <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
-    <div  class="col-s-4"><a href="/perfil">Perfil</a></div>
+    <div id="selected"  class="col-s-4"><a routerLink="/rescate">Rescate</a></div>
+    <div class="col-s-4"><a routerLink="/adopcion">Adopción</a></div>
+    <div  class="col-s-4"><a routerLink="/perfil">Perfil</a></div>
   </article>
 </footer>
 
@@ -33,7 +33,7 @@
     <h1>Notificación de abandono</h1>
     <p id="popup_p">¿Cómo desea proceder?</p>
     <section id="botones">
-      <button class="button-1"><a href="/formulariorescate">Formulario</a></button>
+      <button class="button-1"><a routerLink="/formulariorescate">Formulario</a></button>
       <button class="button-1">Voz</button>
     </section>
   </article>
@@ -46,11 +46,11 @@
         <img (click)="hideMenu()" id="menu-icon" src="./assets/images/menu.png" alt="Botón de menú desplegable.">
     </div>
     <article>
-        <div id="destacado"><a href="/rescate">Rescate</a></div>
-        <div><a href="/adopcion">Adopción</a></div>
-        <div><a href="/perfil">Perfil</a></div>
-        <div><a href="/about">Sobre Nosotros</a></div>
-        <div><a href="/privacidad">Privacidad</a></div>
-        <div><a href="/contacto">Contacto</a></div>
+        <div id="destacado"><a routerLink="/rescate">Rescate</a></div>
+        <div><a routerLink="/adopcion">Adopción</a></div>
+        <div><a routerLink="/perfil">Perfil</a></div>
+        <div><a routerLink="/about">Sobre Nosotros</a></div>
+        <div><a routerLink="/privacidad">Privacidad</a></div>
+        <div><a routerLink="/contacto">Contacto</a></div>
     </article>
 </section>

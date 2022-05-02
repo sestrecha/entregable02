@@ -121,9 +121,9 @@
 
 <footer class="col-s-12">
     <article>
-        <div class="col-s-4"><a href="/rescate">Rescate</a></div>
-        <div class="col-s-4"><a href="/adopcion">Adopción</a></div>
-        <div id="selected" class="col-s-4"><a href="/perfil">Perfil</a></div>
+        <div class="col-s-4"><a routerLink="/rescate">Rescate</a></div>
+        <div class="col-s-4"><a routerLink="/adopcion">Adopción</a></div>
+        <div id="selected" class="col-s-4"><a routerLink="/perfil">Perfil</a></div>
     </article>
 </footer>
 <section id="difuminado" *ngIf="difuminar"></section>
@@ -137,7 +137,7 @@
                 datos” de abajo.</p>
         </div>
         <div id="botones-salir">
-            <button class="button-1 col-s-5"><a href="/perfil">Salir sin guardar.</a></button>
+            <button class="button-1 col-s-5"><a routerLink="/perfil">Salir sin guardar.</a></button>
             <button (click)="salirPopup()" class="button-1 col-s-5">Seguir modificando.</button>
         </div>
     </article>
