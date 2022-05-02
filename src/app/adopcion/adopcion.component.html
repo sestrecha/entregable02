@@ -4,87 +4,63 @@
     <h1 class="col-s-8">Nombre de la App</h1>
 </header>
 
-<section id="difuminado" *ngIf="lectura"></section>
-<section id="popup-lectura">
-    <article *ngIf="lectura" class="col-s-8">
-        <div>
-            <h2>¿Estás preparado para adoptar?</h2>
-            <p>Recuerda que adoptar una mascota conlleva una gran <b>responsabilidad</b> y estar bien informado puede ayudarte a tomar esta decisión tan importante.
-                Si dispones de suficiente tiempo libre para dar paseos diarios con tu nuevo compañero y de recursos suficientes para proporcionarle comida y
-                pagar los gastos veterinarios que puedan surgir, ¡vas por buen camino!<br>
-                Por último,  debes darle a tu mascota el cariño, el amor y la calidez de un hogar.Te aseguramos que tu nuevo compañero te lo devolverá con creces.<br>
-                Si estás de acuerdo con todos estos puntos, ¡estás preparado para adoptar! Si fallas en alguno de ellos, 
-                te recomendamos que esperes a tomar esta decisión hasta que tu situación te lo permita.
-            </p>
-            <h2>¿Qué animales se ajustan más a ti?</h2>
-            <p> Algunos puntos que debes tener en cuenta para darle la mejor calidad de vida a tu mascota son:</p>
-                <ul>
-                    <li><b>Estilo de vida:</b> elige un animal cuyo nivel de actividad coincida con el tuyo. ¡Tú eliges si prefieres más vitalidad o más tranquilidad!</li>
-                    <li><b>Tamaño:</b> si vives en un hogar pequeño, será mejor adoptar un animal que se adecue a este tamaño.</li>
-                    <li><b>¿Tienes otras mascotas?</b> Busca un nuevo compañero que esté acostumbrado a relacionarse.</li>
-                </ul>
-            <button (click)="popUpLectura()">Entendido</button>
-        </div>
-    </article>
-</section>
-
 <section class="principal">
-<section id="lectura-section" class="col-s-11">
-    <div id="div" class="col-s-12">
-        <h2>Información para ti:</h2>
-    </div>
-    <div id="btn-section" class="col-s-12">
-        <a><button id="lectura" (click)="popUpLectura()">¿Estás preparado para adoptar?<br>¿Qué animales se ajustan más a ti?</button></a>
-    </div>
-</section>
+    <section id="lectura-section" class="col-s-11">
+        <div id="div" class="col-s-12">
+            <h2>Información para ti:</h2>
+        </div>
+        <div id="btn-section" class="col-s-12">
+            <a><button id="lectura" (click)="popUpLectura()">¿Estás preparado para adoptar?<br>¿Qué animales se ajustan más a ti?</button></a>
+        </div>
+    </section>
 
-<section id="boton_seccion" class="col-s-12">
-<section id="filter">
-    <p>Filtrar por:</p>
-    <input type="text" placeholder="(Tipo de mascota, nombre, sexo, raza o ciudad)"  [(ngModel)]="searchInput" (ngModelChange)="updateDisplay()">
-</section>
-<button class="button-2" (click)="popUpFiltro()">Filtrar</button>
-</section>
+    <section id="boton_seccion" class="col-s-12">
+        <section class="col-s-7" id="filter">
+            <label class="col-s-12" for="filtrar-por">Filtrar por:</label>
+            <input id="filtrar-por" type="text" placeholder="(Tipo de mascota, nombre, sexo, raza o ciudad)"  [(ngModel)]="searchInput" (ngModelChange)="updateDisplay()">
+        </section>
+        <button class="button-2" (click)="popUpFiltro()">Filtrar</button>
+    </section>
 
-<section id="tl-section" class = "col-s-11">
-    <table id= "tabla" class="col-s-12">    
-        <tr *ngFor="let mascota of display_mascotas; let i=index;">
-            <article id = "fondo_salmon" class="col-s-11" *ngIf="isEven(i)">
-                <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
-                <td id = "informasion" class="col-s-3">
-                    <ul>
-                        <li>{{mascota.nombre}}</li>
-                        <li>{{mascota.tipo}}</li>
-                        <li>{{mascota.sexo}}</li>
-                        <li>{{mascota.edad}} años</li>
-                        <li>{{mascota.raza}}</li>
-                        <li>{{mascota.ciudad}}</li>
-                    </ul>
-                </td>
-                <td>
-                    <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
-                </td>
-            </article>
+    <section id="tl-section" class = "col-s-11">
+        <table id= "tabla" class="col-s-12">    
+            <tr *ngFor="let mascota of display_mascotas; let i=index;">
+                <article id = "fondo_salmon" class="col-s-11" *ngIf="isEven(i)">
+                    <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
+                    <td id = "informasion" class="col-s-3">
+                        <ul>
+                            <li>{{mascota.nombre}}</li>
+                            <li>{{mascota.tipo}}</li>
+                            <li>{{mascota.sexo}}</li>
+                            <li>{{mascota.edad}} años</li>
+                            <li>{{mascota.raza}}</li>
+                            <li>{{mascota.ciudad}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
+                    </td>
+                </article>
 
-            <article id = "fondo_amarillo" class="col-s-11" *ngIf="!isEven(i)">
-                <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
-                <td id = "informasion" class="col-s-3">
-                    <ul>
-                        <li>{{mascota.nombre}}</li>
-                        <li>{{mascota.tipo}}</li>
-                        <li>{{mascota.sexo}}</li>
-                        <li>{{mascota.edad}} años</li>
-                        <li>{{mascota.raza}}</li>
-                        <li>{{mascota.ciudad}}</li>
-                    </ul>
-                </td>
-                <td>
-                    <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
-                </td>
-            </article>
-        </tr>
-    </table>
-</section>
+                <article id = "fondo_amarillo" class="col-s-11" *ngIf="!isEven(i)">
+                    <td id="foto" class="col-s-4"><img src = {{mascota.foto}} alt="Foto de la mascota en adopción"></td>
+                    <td id = "informasion" class="col-s-3">
+                        <ul>
+                            <li>{{mascota.nombre}}</li>
+                            <li>{{mascota.tipo}}</li>
+                            <li>{{mascota.sexo}}</li>
+                            <li>{{mascota.edad}} años</li>
+                            <li>{{mascota.raza}}</li>
+                            <li>{{mascota.ciudad}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <a href="/adopcion/mas-info" class="col-s-4"><button>+info</button></a>
+                    </td>
+                </article>
+            </tr>
+        </table>
+    </section>
 </section>
 
 <footer class="col-s-12">
@@ -99,6 +75,29 @@
 <app-filtrar *ngIf="filtro"></app-filtrar>
 
 <!-- popup lectura-->
+<section id="difuminado" *ngIf="lectura"></section>
+<section id="popup-lectura" *ngIf="lectura" class="pop-up col-s-12">
+    <article class="col-s-10">
+        <div>
+            <h2>¿Estás preparado para adoptar?</h2>
+            <p>Recuerda que adoptar una mascota conlleva una gran <b>responsabilidad</b> y estar bien informado puede ayudarte a tomar esta decisión tan importante.
+                Si dispones de suficiente tiempo libre para dar paseos diarios con tu nuevo compañero y de recursos suficientes para proporcionarle comida y
+                pagar los gastos veterinarios que puedan surgir, ¡vas por buen camino!<br>
+                Por último,  debes darle a tu mascota el cariño, el amor y la calidez de un hogar. Te aseguramos que tu nuevo compañero te lo devolverá con creces.<br>
+                Si estás de acuerdo con todos estos puntos, ¡estás preparado para adoptar! Si fallas en alguno de ellos, 
+                te recomendamos que esperes a tomar esta decisión hasta que tu situación te lo permita.
+            </p>
+            <h2>¿Qué animales se ajustan más a ti?</h2>
+            <p> Algunos puntos que debes tener en cuenta para darle la mejor calidad de vida a tu mascota son:</p>
+                <ul>
+                    <li><b>Estilo de vida:</b> elige un animal cuyo nivel de actividad coincida con el tuyo. ¡Tú eliges si prefieres más vitalidad o más tranquilidad!</li>
+                    <li><b>Tamaño:</b> si vives en un hogar pequeño, será mejor adoptar un animal que se adecue a este tamaño.</li>
+                    <li><b>¿Tienes otras mascotas?</b> Busca un nuevo compañero que esté acostumbrado a relacionarse.</li>
+                </ul>
+        </div>
+        <button (click)="popUpLectura()">Entendido</button>
+    </article>
+</section>
 <!--menu desplegable-->
 <section class="difuminado" *ngIf="difuminar"></section>
 <section class="desplegable col-s-8" *ngIf="menu">

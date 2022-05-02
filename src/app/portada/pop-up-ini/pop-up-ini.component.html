@@ -3,12 +3,14 @@
     <article>
         <button id="volver-btn" (click)="closeIni()">X</button>
         <h1>Inicia sesión</h1>
-        <form>
-            <label for="mail">Correo electrónico</label><br>
-            <input type="text" id="mail" name="mail"><br>
+        <form  [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <label for="usuario">Nombre de usuario</label><br>
+            <input class="col-s-10 form-control" [class.is-invalid]="f.usuario.touched && f.usuario.invalid" type="text" 
+            name="usuario" id="usuario" formControlName="usuario" placeholder="Introduce tu nombre de usuario:"><br>
             <label for="pass">Contraseña</label><br>
-            <input type="text" id="pass" name="pass"><br>
-            <button class="button-1 col-s-5"><p>Entrar</p></button>
+            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass.touched && f.pass.invalid" type="password"
+            name="pass" id="pass" formControlName="pass" placeholder="Introduce tu contraseña:"><br>
+            <button class="button-1 col-s-5" type="submit"><p>Entrar</p></button>
         </form>
         <p>¿Aún no tienes una cuenta?</p>
         <p class="click" (click)="goToReg()">Haz click aquí para registrarte.</p>

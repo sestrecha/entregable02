@@ -1,5 +1,17 @@
 @import "src/styles.scss";
 
+button{
+  background: rgba(255, 132, 115, 0.75);
+  margin: 15% auto;
+  padding: 2%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+
+
+}
+
 label{
 
   /* Botón light */
@@ -23,6 +35,10 @@ p{
   color: #341827;
   margin: 20px auto;
 
+}
+#formu{
+  margin:auto;
+  text-align: center;
 }
 
 

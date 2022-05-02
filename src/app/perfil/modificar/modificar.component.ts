@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
-import * as $ from 'jquery'
+import { DataService } from 'src/app/data.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-modificar',
@@ -23,9 +24,10 @@ export class ModificarComponent implements OnInit{
   
 
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    //this.data.currentUser.subscribe(user => this.username = user)
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
@@ -89,7 +91,6 @@ export class ModificarComponent implements OnInit{
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
-      console.log('ole')
       $('<a href="/perfil"></a>')[0].click();
     }
   }

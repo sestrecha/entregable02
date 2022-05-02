@@ -1,4 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from 'src/main';
+import { DataService } from 'src/app/data.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-pop-up-ini',
@@ -21,11 +25,32 @@ export class PopUpIniComponent implements OnInit {
     this.go_to_reg_event.emit(this.go_to_reg);
   }
 
+  usuario:any;
+  username:any;
+  formulario = new FormGroup({
+    usuario : new FormControl(''),
+    pass : new FormControl('', [Validators.required,
+    Validators.pattern("[0-9]{4}")]),
+    
+  })
+
+  get f()
+  {
+      return this.formulario.controls;
+  }
+
+  onSubmit(){
+    if (this.formulario.valid) {
+      $('<a href="/perfil"></a>')[0].click();
+    }
+  }
+
   
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentUser.subscribe(user => this.username = user)
   }
 
 }

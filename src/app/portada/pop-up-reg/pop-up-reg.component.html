@@ -3,16 +3,20 @@
     <article>
         <button id="volver-btn"(click)="closeReg()">X</button>
         <h1>Crea tu nueva cuenta</h1>
-        <form>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <label for="usuario">Nombre de usuario</label><br>
-            <input type="text" id="usuario" name="usuario"><br>
-            <label for="mail">Correo electrónico</label><br>
-            <input type="text" id="mail" name="mail"><br>
+            <input class="col-s-10 form-control" [class.is-invalid]="f.usuario.touched && f.usuario.invalid" type="text" 
+            name="usuario" id="usuario" formControlName="usuario" placeholder="Elige un nombre de usuario:"><br>
+            <label for="email">Correo electrónico</label><br>
+            <input class="col-s-10 form-control" [class.is-invalid]="f.email.touched && f.email.invalid" type="text" 
+            name="email" id="email" formControlName="email" placeholder="Introduce tu email:"><br>
             <label for="pass">Contraseña</label><br>
-            <input type="text" id="pass" name="pass"><br>
-            <label for="pass-rep">Repetir contraseña</label><br>
-            <input type="text" id="pass-rep" name="pass-rep"><br>
-            <button class="button-1 col-s-5"><p>Crear cuenta</p></button>
+            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass.touched && f.pass.invalid" type="password"
+            name="pass" id="pass" formControlName="pass" placeholder="Introduce una contraseña:"><br>
+            <label for="pass_rep">Repetir contraseña</label><br>
+            <input class="col-s-10 form-control"  [class.is-invalid]="f.pass_rep.touched && f.pass_rep.invalid" type="password"
+            name="pass_rep" id="pass_rep" formControlName="pass_rep" placeholder="Repetir contraseña:"><br>
+            <button class="button-1 col-s-5" type="submit"><p>Crear cuenta</p></button>
         </form>
         <p>¿Ya tienes una cuenta creada?</p>
         <p class="click" (click)="goToIni()">Haz click aquí para iniciar sesión.</p>

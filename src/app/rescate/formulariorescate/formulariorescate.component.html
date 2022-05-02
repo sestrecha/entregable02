@@ -8,7 +8,7 @@
     <img src="/assets/images/BOTÓN%20LEFT.png" (click)="popUpSalir()" id="boton_salir" alt="Boton para ir a la página anterior">
     <p>Notificación de abandono</p>
   </section>
-
+  <section id="formu">
   <form class="form_">
     <div>
       <label>Activar geolocalización</label>
@@ -20,16 +20,16 @@
 
       <option>Gato</option>
 
-      <option>idk</option>
+      <option>Otro</option>
     </select>
 
     <label>¿Está herido?</label>
     <select class="select_">
-      <option>Si, tiene una pata herida</option>
+      <option>Sí, tiene una pata herida.</option>
 
-      <option>Si, esta desnutrido</option>
+      <option>Sí, esta desnutrido.</option>
 
-      <option>idk</option>
+      <option>No.</option>
     </select>
     <label>Añadir breve descripción</label>
     <div>
@@ -49,7 +49,8 @@
     </div>
   </form>
 
-  <button class="button_rosa"><a href="/rescatemarcha">Enviar notificaión</a></button>
+  <button><a href="/rescatemarcha">Enviar notificación</a></button>
+  </section>
 </section>
 <footer class="col-s-12">
   <article>
@@ -59,7 +60,7 @@
   </article>
 </footer>
 
-<section id="difuminado"></section>
+<section class="difuminado" *ngIf="salir"></section>
 <section *ngIf="salir" id="popup-salir" class="pop-up">
     <article class="col-s-8">
         <button id="close" (click)="popUpSalir()">X</button>

@@ -18,10 +18,14 @@
         margin: auto;
         background-color: $claro;
         padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
         *{
             text-align: justify;
             h2{
                 text-align:center;
+                margin-bottom: 5px;
+                margin-top: 20px;
             }
         }
         button{
@@ -38,7 +42,7 @@
             line-height: 25px;
             text-align: center;
             cursor: pointer;
-            margin-bottom: 30%;
+            margin: 10% auto;
         }
     }
 }
@@ -60,9 +64,9 @@
 }
 
 #btn-section{
+    padding: 10px 0px;
     a{
         display: flex;
-        text-decoration: none;
 
     }
     button{
@@ -109,8 +113,10 @@
         text-align: center;
         cursor: pointer;
     }
+
     article{
         display:flex;
+        padding: 5px 0px;
         img{
             width:80%;
             margin:auto;
@@ -139,7 +145,11 @@
 
 #boton_seccion{
     display:flex;
-    margin:auto;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    *{
+        margin:auto;
+    }
 }
 
 h2{

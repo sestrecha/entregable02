@@ -11,22 +11,29 @@
         <div class="col-s-6">
             <img id="ayuda" (click)="popUpAyuda()" src="./assets/images/ayuda.png" alt="Botón de ayuda sobre la página.">
             <h2 class="col-s-12">@{{username}}</h2>
-            <p class="col-s-12">{{datos.desc}}</p>
+            <ng-template [ngIf]="datos.description!=null && datos.description!=''" [ngIfElse]="defecto_desc"><p class="col-s-12">{{datos.description}}</p></ng-template>
+            <ng-template #defecto_desc><p>No hay descripción disponible.</p></ng-template>
         </div>
     </section>
     <section id="datos-section">
-        <ul class="col-s-5">
-            <li>{{datos.n_masc}}</li>
-            <li>Casa {{datos.hogar}} de {{datos.tamanyo_casa}}</li>
-            <li>Discapacidades: {{datos.disc}}</li>
-            <li>{{datos.horas_libres}}</li>
-            <li>{{datos.estilo}}</li>
+        <ul class="col-s-6">
+            <ng-template [ngIf]="datos.n_masc!='' && datos.n_masc!=null" [ngIfElse]="defecto_masc"><li>Número de mascotas: {{datos.n_masc}}</li></ng-template>
+            <ng-template #defecto_masc><li>No hay datos sobre las mascotas.</li></ng-template>
+            <ng-template [ngIf]="datos.hogar!='' && datos.hogar!=null" [ngIfElse]="defecto_hogar"><li>Tipo de vivienda: {{datos.hogar}}</li></ng-template>
+            <ng-template #defecto_hogar><li>No hay datos sobre el tipo de vivienda.</li></ng-template>
+            <ng-template [ngIf]="datos.tamanyo_casa!='' && datos.tamanyo_casa!=null" [ngIfElse]="defecto_tamanyo"><li>Tamaño aproximado del hogar: {{datos.tamanyo_casa}}</li></ng-template>
+            <ng-template #defecto_tamanyo><li>No hay datos sobre el tamaño de vivienda.</li></ng-template>
+            <ng-template [ngIf]="datos.disc!='' && datos.disc!=null" [ngIfElse]="defecto_disc"><li>Discapacidades: {{datos.disc}}</li></ng-template>
+            <ng-template #defecto_disc><li>No hay datos sobre posibles discapacidades.</li></ng-template>
+            <ng-template [ngIf]="datos.horas_libres!='' && datos.horas_libres!=null" [ngIfElse]="defecto_horas"><li>Tiempo libre semanal aproximado: {{datos.horas_libres}}</li></ng-template>
+            <ng-template #defecto_horas><li>No hay datos sobre tiempo libre.</li></ng-template>
+            <ng-template [ngIf]="datos.estilo!='' && datos.estilo!=null" [ngIfElse]="defecto_estilo"><li>Estilo de vida: {{datos.estilo}}</li></ng-template>
+            <ng-template #defecto_estilo><li>No hay datos sobre el estilo de vida.</li></ng-template>
         </ul>
-        <article class="col-s-6">
-            <div class="col-s-12">
-                <img src="./assets/images/location.png" alt="Icono localización.">
-            </div>
-            <p>sakjdsajdñasjdñsadjñ <br>sdasdasddsadsadasdsadsadsad</p>
+        <article class="col-s-4">
+            <img src="./assets/images/location.png" alt="Icono localización.">
+            <ng-template [ngIf]="datos.ubicacion!='' && datos.ubicacion!=null" [ngIfElse]="defecto_ubi"><p class="col-s-12">{{datos.ubicacion}}</p></ng-template>
+            <ng-template #defecto_ubi><p>No hay ubicación disponible.</p></ng-template>
         </article>
     </section>
     <section id="contacto-section" class="col-s-11">
