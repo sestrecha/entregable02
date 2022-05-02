@@ -15,9 +15,9 @@ import { AboutComponent } from './about/about.component';
 import { MasInfoComponent } from './adopcion/mas-info/mas-info.component';
 
 const routes: Routes = [
-  { path:'entregable02/perfil', component:PerfilComponent },
+  { path:'perfil', component:PerfilComponent },
   { path:'portada', component:PortadaComponent },
-  { path:'entregable02/perfil/modificar',  component:ModificarComponent },
+  { path:'perfil/modificar',  component:ModificarComponent },
   { path:'perfil/crear',  component:CrearComponent },
   { path:'seguimiento',  component:SeguimientoComponent },
   { path:'rescate',  component:RescateComponent },

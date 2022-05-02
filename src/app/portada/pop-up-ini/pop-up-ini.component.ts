@@ -41,7 +41,7 @@ export class PopUpIniComponent implements OnInit {
 
   onSubmit(){
     if (this.formulario.valid) {
-      $('<a href="entregable02/perfil"></a>')[0].click();
+      $('<a href="/perfil"></a>')[0].click();
     }
   }
 

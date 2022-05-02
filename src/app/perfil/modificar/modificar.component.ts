@@ -91,7 +91,7 @@ export class ModificarComponent implements OnInit{
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
-      $('<a href="entregable02/perfil"></a>')[0].click();
+      $('<a href="/perfil"></a>')[0].click();
     }
   }
 }
