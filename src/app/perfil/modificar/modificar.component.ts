@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
 import { DataService } from 'src/app/data.service';
-//import * as $ from 'jquery';
 import {Router} from '@angular/router'
 
 @Component({
@@ -28,7 +27,7 @@ export class ModificarComponent implements OnInit{
   constructor(private data: DataService, private router: Router) { }
 
   ngOnInit(): void {
-    //this.data.currentUser.subscribe(user => this.username = user)
+    this.data.currentUser.subscribe(user => this.username = user)
     let user: any = localStorage.getItem(this.username);
     if (user != null){
       this.datos = new Usuario(this.username, user['password'], user['pfp'], user['description'], user['email'], user['tlf'], user['n_masc'],
@@ -93,7 +92,6 @@ export class ModificarComponent implements OnInit{
       
       this.datos.guardarUsuario()
       this.router.navigateByUrl('/perfil')
-      //$('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 }

@@ -40,6 +40,10 @@ export class AdopcionComponent implements OnInit {
     this.filtro = !this.filtro;
   }
 
+  close(close:boolean):void{
+    this.filtro = !close;
+  }
+
   isEven(i:number): boolean{
     return i%2==0;
   }

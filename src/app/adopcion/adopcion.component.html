@@ -72,7 +72,7 @@
 </footer>
 
 <!-- llamada a componente hijo-->
-<app-filtrar *ngIf="filtro"></app-filtrar>
+<app-filtrar (close_event)="close($event)" *ngIf="filtro"></app-filtrar>
 
 <!-- popup lectura-->
 <section id="difuminado" *ngIf="lectura"></section>

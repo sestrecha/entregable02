@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
 import { DataService } from 'src/app/data.service';
-//import * as $ from 'jquery';
 import {Router} from '@angular/router'
 
 @Component({
@@ -55,7 +54,6 @@ export class PopUpRegComponent implements OnInit {
       this.data.updateUser(this.f.usuario.value)
       this.usuario.guardarUsuario()
       this.router.navigateByUrl('/perfil/crear')
-      //$('<a href="entregable02/perfil/crear"></a>')[0].click();
     }
   }
 

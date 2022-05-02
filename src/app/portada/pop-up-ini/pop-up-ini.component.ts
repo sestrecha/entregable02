@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/data.service';
 import {Router} from '@angular/router';
-//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-pop-up-ini',
@@ -42,7 +41,6 @@ export class PopUpIniComponent implements OnInit {
   onSubmit(){
     if (this.formulario.valid) {
       this.router.navigateByUrl('/perfil')
-      //$('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 

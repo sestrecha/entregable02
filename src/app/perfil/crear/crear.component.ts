@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/main';
 import { DataService } from 'src/app/data.service';
-//import * as $ from 'jquery';
 import {Router} from '@angular/router'
 
 @Component({
@@ -85,7 +84,6 @@ export class CrearComponent implements OnInit {salir:boolean = false;
       
       this.datos.guardarUsuario()
       this.router.navigateByUrl('/perfil')
-      //$('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 }
