@@ -53,7 +53,7 @@ export class PopUpRegComponent implements OnInit {
       "", "", "", "", "")
       this.data.updateUser(this.f.usuario.value)
       this.usuario.guardarUsuario()
-      $('<a href="/perfil/crear"></a>')[0].click();
+      $('<a href="entregable02/perfil/crear"></a>')[0].click();
     }
   }
 

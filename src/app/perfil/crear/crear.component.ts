@@ -83,7 +83,7 @@ export class CrearComponent implements OnInit {salir:boolean = false;
       this.datos.ubicacion = this.f.ubicacion.value;
       
       this.datos.guardarUsuario()
-      $('<a href="/perfil"></a>')[0].click();
+      $('<a href="entregable02/perfil"></a>')[0].click();
     }
   }
 }
