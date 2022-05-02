@@ -55,7 +55,7 @@ export class AdopcionComponent implements OnInit {
   updateDisplay() {
     this.display_mascotas = this.searchFilter(this.mascotas)
   }
-  // esta funcion filtra la array de coches respecto al searchInput
+  // esta funcion filtra la array de mascotas respecto al searchInput
   searchFilter(array_mascotas:Array<Mascota>) {
     if (array_mascotas.length == 0) {
       return [];
